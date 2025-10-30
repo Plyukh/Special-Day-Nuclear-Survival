@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7806335295562656969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7808942735435926755}
+  - component: {fileID: 4478570354534902005}
+  m_Layer: 0
+  m_Name: Knife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7808942735435926755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806335295562656969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4478570354534902005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806335295562656969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2506b1420aca78b40849cd1adbad2198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 57
+  itemName: "\u041D\u043E\u0436"
+  englishItemName: Knife
+  indonesianItemName: Pisau
+  itemDescription: "\u041E\u0441\u0442\u0440\u043E\u0435 \u043A\u043E\u043B\u044E\u0449\u0435-\u0440\u0435\u0436\u0443\u0449\u0435\u0435
+    \u043E\u0440\u0443\u0436\u0438\u0435."
+  englishItemDescription: A sharp piercing-cutting weapon.
+  indonesianItemDescription: Senjata tajam untuk menusuk dan memotong.
+  itemType: 0
+  stack: 0
+  number: 1
+  cost: 165
+  weight: 2
+  itemTypeSprite: {fileID: 21300000, guid: ee98cab7f6ac8fd4fa11c2bff46ece53, type: 3}
+  itemSprite: {fileID: 21300000, guid: d33c74262fc2be7469a674c9dc039775, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 2
+  weaponType: 0
+  damageType: 0
+  minDamage: 3
+  maxDamage: 10
+  distance: 1.75
+  attackTime: 1.75
+  ammoName: 
+  effect: {fileID: 0}
+  projectile: {fileID: 337605037066161304, guid: f1accff893b70d943b956c6b16278ed6, type: 3}

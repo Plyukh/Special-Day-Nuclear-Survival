@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4874005353902672135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4879315896603670497}
+  - component: {fileID: -2228825565406184829}
+  m_Layer: 0
+  m_Name: Shotgun Barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4879315896603670497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874005353902672135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2228825565406184829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874005353902672135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44cdaaf2b51fd2429c72502eab4e251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 33
+  itemName: "\u0421\u0442\u0432\u043E\u043B \u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A\u0430"
+  englishItemName: Shotgun Barrel
+  indonesianItemName: Laras Senapan
+  itemDescription: "\u0421\u0442\u0432\u043E\u043B \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A\u0430.
+    \u041E\u0434\u0438\u043D \u0438\u0437 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0445
+    \u0435\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A\u0430."
+  englishItemDescription: The barrel of a shotgun. One of the main elements of a
+    shotgun.
+  indonesianItemDescription: Larangan senapan. Salah satu elemen utama dari senapan
+    shotgun.
+  itemType: 7
+  stack: 0
+  number: 1
+  cost: 250
+  weight: 1
+  itemTypeSprite: {fileID: 21300000, guid: ebaa2d030c2f27c4589a7ecda67d07b1, type: 3}
+  itemSprite: {fileID: 21300000, guid: 598551c64cf9bcd4db1ce34f0f8f1637, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 0

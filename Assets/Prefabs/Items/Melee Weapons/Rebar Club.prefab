@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7851164895226328798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7853233644443198102}
+  - component: {fileID: 3986031618737333528}
+  m_Layer: 0
+  m_Name: Rebar Club
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7853233644443198102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851164895226328798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3986031618737333528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851164895226328798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2506b1420aca78b40849cd1adbad2198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 58
+  itemName: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430"
+  englishItemName: Rebar Club
+  indonesianItemName: Pemukul Besi Beton
+  itemDescription: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430, \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442
+    \u0441\u043E\u0431\u043E\u0439 \u0434\u0432\u0430 \u043C\u0435\u0442\u0430\u043B\u043B\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+    \u043F\u0440\u0443\u0442\u0430 \u0441 \u043A\u0443\u0441\u043A\u043E\u043C \u0431\u0435\u0442\u043E\u043D\u0430."
+  englishItemDescription: The reinforcement consists of two metal rods with a piece
+    of concrete.
+  indonesianItemDescription: Perkuatan terdiri dari dua batang logam dengan sepotong
+    beton.
+  itemType: 0
+  stack: 0
+  number: 1
+  cost: 3750
+  weight: 24
+  itemTypeSprite: {fileID: 21300000, guid: ee98cab7f6ac8fd4fa11c2bff46ece53, type: 3}
+  itemSprite: {fileID: 21300000, guid: 8971a6e5aa79aa64290f7f7d1f685065, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 9
+  weaponType: 1
+  damageType: 0
+  minDamage: 18
+  maxDamage: 36
+  distance: 1.75
+  attackTime: 2
+  ammoName: 
+  effect: {fileID: 0}
+  projectile: {fileID: 337605037066161304, guid: 5b10acdfff856bc489ab2cd444d515cd, type: 3}

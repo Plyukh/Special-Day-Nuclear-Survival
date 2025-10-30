@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8618645315208458501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7821433398997019112}
+  - component: {fileID: 3599532558486235619}
+  m_Layer: 0
+  m_Name: Flamethrower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7821433398997019112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618645315208458501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3599532558486235619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618645315208458501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2506b1420aca78b40849cd1adbad2198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 43
+  itemName: "\u041E\u0433\u043D\u0435\u043C\u0435\u0442"
+  englishItemName: Flamethrower
+  indonesianItemName: Penyembur Api
+  itemDescription: "\u0412\u044B\u043F\u0443\u0441\u043A\u0430\u0435\u0442 \u0441\u0442\u0440\u0443\u044E
+    \u043E\u0447\u0435\u043D\u044C \u0433\u043E\u0440\u044F\u0447\u0435\u0439, \u0433\u043E\u0440\u044E\u0447\u0435\u0439
+    \u0436\u0438\u0434\u043A\u043E\u0441\u0442\u0438. \u0414\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u044B
+    \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043E\u0441\u043E\u0431\u043E\u0433\u043E
+    \u0433\u043E\u0440\u044E\u0447\u0435\u0433\u043E."
+  englishItemDescription: Releases a jet of very hot, flammable liquid. It requires
+    special fuel to operate.
+  indonesianItemDescription: Melepaskan semburan cairan yang sangat panas dan mudah
+    terbakar. Diperlukan bahan bakar khusus untuk mengoperasikannya.
+  itemType: 0
+  stack: 0
+  number: 1
+  cost: 3000
+  weight: 20
+  itemTypeSprite: {fileID: 21300000, guid: ec1844939f9e5c6448f49e26fe2946d0, type: 3}
+  itemSprite: {fileID: 21300000, guid: b6e058eef1643a6448f06cef70a8729a, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 9
+  weaponType: 3
+  damageType: 3
+  minDamage: 15
+  maxDamage: 25
+  distance: 20
+  attackTime: 2.5
+  ammoName: "\u0422\u043E\u043F\u043B\u0438\u0432\u043E"
+  effect: {fileID: 182542, guid: e1653b7359be04046b2cd2d4c631d7cb, type: 3}
+  projectile: {fileID: -6169321323404626271, guid: b6da3743e2edc494ebdf8c378fec38b6, type: 3}

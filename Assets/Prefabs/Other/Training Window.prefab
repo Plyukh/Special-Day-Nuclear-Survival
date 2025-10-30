@@ -1,0 +1,5448 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &419424192571442252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106236524666048035}
+  - component: {fileID: 9179437558763674903}
+  - component: {fileID: 7287897851634257834}
+  - component: {fileID: 5562867718755860067}
+  m_Layer: 5
+  m_Name: Confirmation Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &106236524666048035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419424192571442252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8483279258281741432}
+  m_Father: {fileID: 3322250911113579218}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00012207031, y: 318.07693}
+  m_SizeDelta: {x: 960, y: 636.15393}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9179437558763674903
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419424192571442252}
+  m_CullTransparentMesh: 1
+--- !u!114 &7287897851634257834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419424192571442252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5562867718755860067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419424192571442252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 7287897851634257834}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 419424192571442252}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1141465494472080647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100467950182890662}
+  - component: {fileID: 617589160421703041}
+  - component: {fileID: 1872285203738004908}
+  - component: {fileID: 1116043657962861200}
+  m_Layer: 5
+  m_Name: Yes Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8100467950182890662
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141465494472080647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3532580805341457284}
+  m_Father: {fileID: 8483279258281741432}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 250, y: -125}
+  m_SizeDelta: {x: 250, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &617589160421703041
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141465494472080647}
+  m_CullTransparentMesh: 1
+--- !u!114 &1872285203738004908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141465494472080647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1756781b076badb4cbb16423f0752857, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1116043657962861200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141465494472080647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 7891653799643889390}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2369311047693889861}
+        m_TargetAssemblyTypeName: TrainingSystem, Assembly-CSharp
+        m_MethodName: CompleteTraining
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1202397445529578826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8119215830838690154}
+  - component: {fileID: 3832522689475246598}
+  - component: {fileID: 144605291827001732}
+  - component: {fileID: 6972118217198026048}
+  m_Layer: 5
+  m_Name: Restart Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8119215830838690154
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202397445529578826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 335224872437759191}
+  - {fileID: 7214585269745711563}
+  m_Father: {fileID: 6403035404336516417}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -240, y: -68.75}
+  m_SizeDelta: {x: 268.75, y: 62.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3832522689475246598
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202397445529578826}
+  m_CullTransparentMesh: 1
+--- !u!114 &144605291827001732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202397445529578826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1333333, g: 0.1490196, b: 0.1803922, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6972118217198026048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202397445529578826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 2985003156588801264}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419424192571442252}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!1 &1842298530753357632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471771708176470568}
+  - component: {fileID: 3500398392392037823}
+  - component: {fileID: 5492793584765619284}
+  m_Layer: 5
+  m_Name: Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1471771708176470568
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842298530753357632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840926793892349683}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0010033, y: 0}
+  m_SizeDelta: {x: 268.75, y: 62.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3500398392392037823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842298530753357632}
+  m_CullTransparentMesh: 1
+--- !u!114 &5492793584765619284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842298530753357632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0ea6c5be7f5271345b28683831c364ac, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2074712140343050013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840926793892349683}
+  - component: {fileID: 8850281365112337106}
+  - component: {fileID: 1596720401631597782}
+  - component: {fileID: 3945902435233422451}
+  m_Layer: 5
+  m_Name: Next Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &840926793892349683
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074712140343050013}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1471771708176470568}
+  - {fileID: 4813947330348837622}
+  m_Father: {fileID: 6403035404336516417}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 240, y: -68.75}
+  m_SizeDelta: {x: 268.75, y: 62.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8850281365112337106
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074712140343050013}
+  m_CullTransparentMesh: 1
+--- !u!114 &1596720401631597782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074712140343050013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1333333, g: 0.1490196, b: 0.1803922, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3945902435233422451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074712140343050013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 5492793584765619284}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2369311047693889861}
+        m_TargetAssemblyTypeName: TrainingSystem, Assembly-CSharp
+        m_MethodName: NextDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1202397445529578826}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &2959535446417209981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8460044268534925809}
+  - component: {fileID: 6394135575924346133}
+  - component: {fileID: 8439336602903101886}
+  - component: {fileID: 9169001517497859227}
+  m_Layer: 5
+  m_Name: No Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8460044268534925809
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959535446417209981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6801120591800045207}
+  m_Father: {fileID: 8483279258281741432}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: -125}
+  m_SizeDelta: {x: 250, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6394135575924346133
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959535446417209981}
+  m_CullTransparentMesh: 1
+--- !u!114 &8439336602903101886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959535446417209981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1756781b076badb4cbb16423f0752857, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9169001517497859227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959535446417209981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8856465617592412146}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419424192571442252}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &3169848291169729947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335224872437759191}
+  - component: {fileID: 1602158344574911999}
+  - component: {fileID: 2985003156588801264}
+  m_Layer: 5
+  m_Name: Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &335224872437759191
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169848291169729947}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8119215830838690154}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0010033, y: 0}
+  m_SizeDelta: {x: 268.75, y: 62.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1602158344574911999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169848291169729947}
+  m_CullTransparentMesh: 1
+--- !u!114 &2985003156588801264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169848291169729947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0ea6c5be7f5271345b28683831c364ac, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3428178731583101230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078246236810433195}
+  - component: {fileID: 5293307522708143372}
+  - component: {fileID: 3950956671175190483}
+  m_Layer: 5
+  m_Name: Object Description Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2078246236810433195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428178731583101230}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50000405, y: 0.50000405, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8483279258281741432}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0014114, y: 24.999}
+  m_SizeDelta: {x: 1800, y: 799.99}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5293307522708143372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428178731583101230}
+  m_CullTransparentMesh: 1
+--- !u!114 &3950956671175190483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428178731583101230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 65
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B, \u0447\u0442\u043E
+    \u0445\u043E\u0442\u0438\u0442\u0435 \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+    \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435? \u0415\u0441\u043B\u0438 \u0438\u0433\u0440\u0430\u0439\u0442\u0435
+    \u043F\u0435\u0440\u0432\u044B\u0439 \u0440\u0430\u0437, \u0442\u043E \u0432\u0430\u043C
+    \u0441\u043B\u0435\u0434\u0443\u0435\u0442 \u043F\u0440\u043E\u0439\u0442\u0438
+    \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435! \u0411\u0435\u0437 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F
+    \u0432\u044B \u043E\u0431\u0440\u0435\u0447\u0435\u043D\u044B."
+--- !u!1 &3606865414803206252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484359124519334896}
+  - component: {fileID: 2530810539481535769}
+  - component: {fileID: 566188808838330496}
+  m_Layer: 5
+  m_Name: TrainingText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1484359124519334896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606865414803206252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50000405, y: 0.50000405, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6403035404336516417}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 43.75}
+  m_SizeDelta: {x: 1870, y: 275}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2530810539481535769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606865414803206252}
+  m_CullTransparentMesh: 1
+--- !u!114 &566188808838330496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606865414803206252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 65
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!1 &3805581625971485916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6403035404336516417}
+  - component: {fileID: 3674114144051001238}
+  - component: {fileID: 4410725851171359080}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6403035404336516417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805581625971485916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1484359124519334896}
+  - {fileID: 8119215830838690154}
+  - {fileID: 840926793892349683}
+  m_Father: {fileID: 3322250911113579218}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 960, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3674114144051001238
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805581625971485916}
+  m_CullTransparentMesh: 1
+--- !u!114 &4410725851171359080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805581625971485916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0ea6c5be7f5271345b28683831c364ac, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3979843383703661149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7214585269745711563}
+  - component: {fileID: 7085093307100023366}
+  - component: {fileID: 1470697885077405576}
+  - component: {fileID: 5415872067021998634}
+  m_Layer: 5
+  m_Name: Weight Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7214585269745711563
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979843383703661149}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999583, y: 0.49999583, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8119215830838690154}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000095367, y: -0.000050545}
+  m_SizeDelta: {x: 537.5, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7085093307100023366
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979843383703661149}
+  m_CullTransparentMesh: 1
+--- !u!114 &1470697885077405576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979843383703661149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+--- !u!82 &5415872067021998634
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979843383703661149}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &5404351458415128181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6599509978754242044}
+  - component: {fileID: 7811779619453230802}
+  - component: {fileID: 793554244318237896}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6599509978754242044
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404351458415128181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8483279258281741432}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7811779619453230802
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404351458415128181}
+  m_CullTransparentMesh: 1
+--- !u!114 &793554244318237896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404351458415128181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1756781b076badb4cbb16423f0752857, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6808237374630506753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313798976860926742}
+  - component: {fileID: 4714083221875753763}
+  - component: {fileID: 1996407785476726702}
+  m_Layer: 5
+  m_Name: Object Name Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &313798976860926742
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808237374630506753}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50000405, y: 0.50000405, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8483279258281741432}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000014472, y: 0.00035291}
+  m_SizeDelta: {x: 1800, y: 750}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4714083221875753763
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808237374630506753}
+  m_CullTransparentMesh: 1
+--- !u!114 &1996407785476726702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808237374630506753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 85
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435!"
+--- !u!1 &7137556323272441275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4813947330348837622}
+  - component: {fileID: 9110665168758009120}
+  - component: {fileID: 7871201394772279036}
+  - component: {fileID: 1167895876016565591}
+  m_Layer: 5
+  m_Name: Weight Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4813947330348837622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137556323272441275}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999583, y: 0.49999583, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840926793892349683}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000047932, y: -0.00000046488}
+  m_SizeDelta: {x: 537.5, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9110665168758009120
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137556323272441275}
+  m_CullTransparentMesh: 1
+--- !u!114 &7871201394772279036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137556323272441275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+--- !u!82 &1167895876016565591
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137556323272441275}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &7477662154685455055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3322250911113579218}
+  - component: {fileID: 5465577350947402994}
+  - component: {fileID: 8773613841416705213}
+  - component: {fileID: 6360659763437629892}
+  - component: {fileID: 2369311047693889861}
+  m_Layer: 5
+  m_Name: Training Window
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &3322250911113579218
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.21875, y: 1.21875, z: 1.21875}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6403035404336516417}
+  - {fileID: 106236524666048035}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 1170, y: 152.34375}
+  m_SizeDelta: {x: 960, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5465577350947402994
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_CullTransparentMesh: 1
+--- !u!114 &8773613841416705213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+  source: {fileID: 0}
+  vibrancy: 0
+  brightness: 0
+  flatten: 0.15
+  m_spriteBlending: 0
+--- !u!95 &6360659763437629892
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8087b300f8060a45a26e017e708f5df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2369311047693889861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ab8c4780ea6bb4389e20063bcbad15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  complete: 0
+  blueprints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  panelCraftButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  panelStatsButton:
+  - {fileID: 0}
+  - {fileID: 0}
+  panelQuestButton:
+  - {fileID: 0}
+  - {fileID: 0}
+  inventoryButton: {fileID: 0}
+  stealthButton: {fileID: 0}
+  grenadeButton: {fileID: 0}
+  healButton: {fileID: 0}
+  craftButton: {fileID: 0}
+  characterButton: {fileID: 0}
+  questButton: {fileID: 0}
+  settingButton: {fileID: 0}
+  attackButton: {fileID: 0}
+  dialogueButton: {fileID: 0}
+  useButton: {fileID: 0}
+  dragAndDrop: {fileID: 0}
+  playerDialoguePrefab: {fileID: 8575101507890860313, guid: bcff1e21a8e7dc44ca60ae120be872c0, type: 3}
+  closeInventoryButton: {fileID: 0}
+  closeCraftButton: {fileID: 0}
+  closeStatsButton: {fileID: 0}
+  closeQuestButton: {fileID: 0}
+  nextButton: {fileID: 3945902435233422451}
+  descriptionText: {fileID: 566188808838330496}
+  interactableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  trainingParts:
+  - Description:
+    - "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
+      \u0432 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435. \u0422\u0443\u0442
+      \u0432\u0430\u0441 \u043F\u043E\u0441\u0432\u044F\u0442\u044F\u0442 \u0432
+      \u0431\u0430\u0437\u043E\u0432\u044B\u0435 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0438
+      \u0438\u0433\u0440\u044B."
+    - "\u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u0430, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0435\u043C
+      \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E
+      \u043A\u043E\u043C\u043D\u0430\u0442\u0443. \u041A\u043E\u043C\u043D\u0430\u0442\u044B,
+      \u0432 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0432\u044B \u0435\u0449\u0435
+      \u043D\u0435 \u0431\u044B\u043B\u0438, \u0437\u0430\u043A\u0440\u044B\u0442\u044B
+      \u0447\u0435\u0440\u043D\u044B\u043C \u0442\u0443\u043C\u0430\u043D\u043E\u043C."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u043F\u043E\u043B\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436 \u0441\u0434\u0432\u0438\u043D\u0443\u043B\u0441\u044F
+      \u0441 \u043C\u0435\u0441\u0442\u0430 \u0438 \u0440\u0430\u0437\u0432\u0435\u044F\u043B
+      \u0442\u0443\u043C\u0430\u043D."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 0000000001000000020000000300000004000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 1
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 1
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 1
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 1
+    NextPart: 1
+  - Description:
+    - "\u041E\u0442\u043B\u0438\u0447\u043D\u043E, \u0442\u0435\u043F\u0435\u0440\u044C
+      \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0435\u043C \u0447\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C
+      \u043D\u043E\u0432\u0435\u043D\u044C\u043A\u043E\u0435. \u041D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,
+      \u043F\u043E\u0438\u0441\u043A\u0430\u0442\u044C \u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B."
+    - "\u042F\u0449\u0438\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+      \u0432 \u044D\u0442\u043E\u0439 \u043A\u043E\u043C\u043D\u0430\u0442\u0435,
+      \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442 \u0441\u0438\u043C\u043F\u0430\u0442\u0438\u0447\u043D\u043E.
+      \u0415\u0433\u043E \u0441\u043B\u0435\u0434\u0443\u0435\u0442 \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u044F\u0449\u0438\u043A\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 00000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 1
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 2
+  - Description:
+    - "\u0412\u0435\u043B\u0438\u043A\u043E\u043B\u0435\u043F\u043D\u043E, \u0442\u0435\u043F\u0435\u0440\u044C
+      \u043D\u0443\u0436\u043D\u043E \u0437\u0430\u0431\u0440\u0430\u0442\u044C \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
+      \u0438\u0437 \u044F\u0449\u0438\u043A\u0430 \u0432 \u0441\u0432\u043E\u0439
+      \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
+      \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u0441\u043B\u0435\u0432\u0430."
+    - "\u041D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439 \u043C\u043E\u043C\u0435\u043D\u0442
+      \u0443 \u0432\u0430\u0441 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u043E
+      10 \u044F\u0447\u0435\u0435\u043A, \u0432 \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u043C
+      \u0432\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0442\u044C
+      \u0438\u0445 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E,
+      \u043D\u043E \u0434\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u0432\u0430\u043C
+      \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438
+      \u0440\u044E\u043A\u0437\u0430\u043A."
+    - "\u041D\u043E \u043E \u0440\u044E\u043A\u0437\u0430\u043A\u0435 \u0441\u0435\u0439\u0447\u0430\u0441
+      \u0440\u0430\u043D\u043E \u0434\u0443\u043C\u0430\u0442\u044C. \u0420\u0430\u0437\u0431\u0435\u0440\u0435\u043C\u0441\u044F
+      \u0445\u043E\u0442\u044F \u0431\u044B \u0441 \u0442\u0435\u043C, \u0447\u0442\u043E
+      \u0438\u043C\u0435\u0435\u043C."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0438 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442, \u043F\u043E\u043A\u0430 \u043D\u0435
+      \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
+      \u0432 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u0443\u044E \u044F\u0447\u0435\u0439\u043A\u0443
+      \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F.
+      \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435
+      \u043E\u0431\u0430 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 00000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 1
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items:
+    - {fileID: 714208155773432568, guid: 2cd8672a95856cc4b8bc649ba574d550, type: 3}
+    - {fileID: 4671773967723695710, guid: d4ad17517bd24b345b656057b8997916, type: 3}
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 1
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 3
+  - Description:
+    - "\u0412\u044B \u0434\u0435\u043B\u0430\u0435\u0442\u0435 \u0443\u0441\u043F\u0435\u0445\u0438!
+      \u0422\u0430\u043A \u0434\u0435\u0440\u0436\u0430\u0442\u044C!"
+    - "\u041F\u0440\u0435\u0434\u043C\u0435\u0442\u044B \u0443 \u043D\u0430\u0441.
+      \u0422\u0435\u043F\u0435\u0440\u044C \u0437\u0430\u043A\u0440\u043E\u0435\u043C
+      \"\u041C\u0435\u043D\u044E \u041E\u0431\u044B\u0441\u043A\u0430\" \u0438 \u0431\u0443\u0434\u0435\u043C
+      \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u0434\u0430\u043B\u044C\u0448\u0435."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 1
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 1
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 4
+  - Description:
+    - "\u0422\u0435\u043F\u0435\u0440\u044C \u0441\u0442\u043E\u0438\u0442 \u043F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C
+      \u0434\u043E\u0431\u044B\u0442\u044C \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
+      \u0434\u0440\u0443\u0433\u0438\u043C \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u043C."
+    - "\u0412\u0438\u0434\u0438\u0442\u0435 \u0432\u043E\u043D \u0442\u043E\u0442
+      \u0436\u0435\u043B\u0435\u0437\u043D\u044B\u0439 \u043B\u0438\u0441\u0442?
+      \u041E\u0442\u043B\u0438\u0447\u043D\u043E! \u042D\u0442\u043E\u0442 \u043B\u0438\u0441\u0442
+      \u0432\u044B \u0440\u0430\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043D\u0430
+      \u043C\u0435\u0442\u0430\u043B\u043B\u043E\u043B\u043E\u043C."
+    - "\u0421\u0442\u043E\u0438\u0442 \u0432\u0430\u0441 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0434\u0438\u0442\u044C,
+      \u0447\u0442\u043E \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u0434\u043B\u044F \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F
+      \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0443
+      \u0432\u0430\u0448\u0438\u0445 \u043D\u0430\u0432\u044B\u043A\u043E\u0432.
+      \u0412 \u0434\u0430\u043D\u043D\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435
+      \u044D\u0442\u043E \u043D\u0430\u0432\u044B\u043A \"\u0420\u0435\u043C\u043E\u043D\u0442\"."
+    - "\u041D\u0435 \u0432\u043E\u043B\u043D\u0443\u0439\u0442\u0435\u0441\u044C,
+      \u0443 \u0432\u0430\u0441 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F
+      \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C \u0436\u0435\u043B\u0435\u0437\u043D\u044B\u0439
+      \u043B\u0438\u0441\u0442. \u041D\u043E \u0432 \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u043C
+      \u043C\u043E\u0436\u0435\u0442 \u043D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C\u0441\u044F."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0433\u043E
+      \u043B\u0438\u0441\u0442\u0430 \u0434\u043B\u044F \u0442\u043E\u0433\u043E,
+      \u0447\u0442\u043E\u0431\u044B \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u0420\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C\", \u0430 \u0437\u0430\u0442\u0435\u043C
+      \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 01000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 1
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 5
+  - Description:
+    - "\u041D\u0435 \u0431\u044B\u043B\u043E \u0441\u043E\u043C\u043D\u0435\u043D\u0438\u0439,
+      \u0447\u0442\u043E \u0443 \u0432\u0430\u0441 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F
+      \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C \u044D\u0442\u043E\u0442
+      \u043B\u0438\u0441\u0442!"
+    - "\u0417\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043C\u0435\u0442\u0430\u043B\u043B
+      \u0442\u0430\u043A \u0436\u0435, \u043A\u0430\u043A \u0438 \u0440\u0430\u043D\u044C\u0448\u0435
+      \u0437\u0430\u0431\u0438\u0440\u0430\u043B\u0438 \u0433\u0440\u0430\u043D\u0430\u0442\u0443
+      \u0438 \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0438 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442, \u043F\u043E\u043A\u0430 \u043D\u0435
+      \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
+      \u0432 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u0443\u044E \u044F\u0447\u0435\u0439\u043A\u0443
+      \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 01000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 1
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items:
+    - {fileID: 714208155773432568, guid: 2cd8672a95856cc4b8bc649ba574d550, type: 3}
+    - {fileID: 4671773967723695710, guid: d4ad17517bd24b345b656057b8997916, type: 3}
+    - {fileID: 2782887724703722662, guid: 5673b233222c8f941bb83599e7d25c39, type: 3}
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 1
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 6
+  - Description:
+    - "\u0412\u0430\u043C \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u043E
+      \u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u0442\u0441\u044F \u043C\u0435\u0442\u0430\u043B\u043B,
+      \u0435\u0441\u043B\u0438 \u0432\u044B \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044C
+      \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u043D\u0430\u0432\u044B\u043A
+      \"\u041D\u0430\u0443\u043A\u0430\". \u041D\u043E \u043E\u0431 \u044D\u0442\u043E\u043C
+      \u043F\u043E\u0442\u043E\u043C."
+    - "\u041D\u0435 \u0443\u0441\u0442\u0430\u043B\u0438? \u0411\u0443\u0434\u0435\u043C
+      \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u0434\u0430\u043B\u044C\u0448\u0435?"
+    - "\u041F\u0440\u0435\u0432\u043E\u0441\u0445\u043E\u0434\u043D\u043E! \u041D\u0430\u0436\u043C\u0438\u0442\u0435
+      \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443 \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C
+      \u043F\u0440\u0430\u0432\u043E\u043C \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0437\u0430\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 1
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 1
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 7
+  - Description:
+    - "\u0412 \u044D\u0442\u043E\u0439 \u043A\u043E\u043C\u043D\u0430\u0442\u0435,
+      \u0432\u044B \u0441\u0434\u0435\u043B\u0430\u043B\u0438 \u0432\u0441\u0435,
+      \u0447\u0442\u043E \u043C\u043E\u0433\u043B\u0438. \u041F\u0440\u0438\u0448\u043B\u043E
+      \u0432\u0440\u0435\u043C\u044F \u0432\u044B\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
+      \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443."
+    - "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0430\u044F \u0437\u0430\u0434\u0430\u0447\u0430
+      \u043F\u043E\u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043E\u0442 \u0432\u0430\u0441
+      \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u0434\u0432\u0435\u0440\u044C.
+      \u0421\u043F\u0440\u0430\u0432\u0438\u0442\u0435\u0441\u044C \u043B\u0438 \u0432\u044B
+      \u0441 \u044D\u0442\u0438\u043C?"
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0434\u0432\u0435\u0440\u0438
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
+      \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435
+      \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 02000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 8
+  - Description:
+    - "\u0418 \u0432\u043E\u0442 \u043C\u044B \u0443\u0436\u0435 \u0432 \u043D\u043E\u0432\u043E\u0439
+      \u043A\u043E\u043C\u043D\u0430\u0442\u0435. \u041D\u0435 \u0441\u0442\u043E\u0438\u0442
+      \u043F\u0443\u0433\u0430\u0442\u044C\u0441\u044F, \u044D\u0442\u043E \u0432\u0441\u0435\u0433\u043E
+      \u043B\u0438\u0448\u044C \u0447\u0435\u043B\u043E\u0432\u0435\u043A."
+    - "\u041A\u0430\u043A \u0432\u044B \u0432\u0438\u0434\u0438\u0442\u0435, \u043E\u043D
+      \u043D\u0435 \u0430\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u0435\u043D.
+      \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u043F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C
+      \u0441 \u043D\u0438\u043C."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 02000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 1
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 1
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 1
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 9
+  - Description:
+    - "\u0412\u044B \u043E\u0442\u043A\u0440\u044B\u043B\u0438 \u0434\u0438\u0430\u043B\u043E\u0433\u043E\u0432\u043E\u0435
+      \u043C\u0435\u043D\u044E. \u0412\u0432\u0435\u0440\u0445\u0443 \u0443\u043A\u0430\u0437\u0430\u043D\u043E,
+      \u0447\u0442\u043E \u0441\u043A\u0430\u0437\u0430\u043B \u0432\u0430\u043C
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436, \u0430 \u0432\u043D\u0438\u0437\u0443
+      - \u0447\u0442\u043E \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043E\u0442\u0432\u0435\u0442\u0438\u0442\u044C."
+    - "\u041D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439 \u043C\u043E\u043C\u0435\u043D\u0442
+      \u0443 \u0432\u0430\u0441 \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u0438\u043D
+      \u0432\u0430\u0440\u0438\u0430\u043D\u0442 \u043E\u0442\u0432\u0435\u0442\u0430,
+      \u0442\u0430\u043A \u043A\u0430\u043A \u0432\u0430\u0448 \u0441\u043E\u0431\u0435\u0441\u0435\u0434\u043D\u0438\u043A
+      \u043D\u0435 \u043E\u0447\u0435\u043D\u044C \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440\u0447\u0438\u0432."
+    - "\u0427\u0442\u043E \u0436, \u0440\u0430\u0441\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0442\u044C\u0441\u044F
+      \u0438\u0437-\u0437\u0430 \u044D\u0442\u043E\u0433\u043E \u043D\u0435 \u0441\u0442\u043E\u0438\u0442.
+      \u0412 \u0431\u0443\u0434\u0443\u0449\u0435\u043C \u0432\u044B \u043D\u0430\u0439\u0434\u0435\u0442\u0435
+      \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0445 \u0441\u043E\u0431\u0435\u0441\u0435\u0434\u043D\u0438\u043A\u043E\u0432."
+    - "\u041E\u0441\u0442\u0430\u0432\u0438\u043C \u0432 \u043F\u043E\u043A\u043E\u0435
+      \u044D\u0442\u043E\u0433\u043E \u0431\u0435\u0434\u043D\u044F\u0433\u0443."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
+      \u0432\u0430\u0440\u0438\u0430\u043D\u0442 \u043E\u0442\u0432\u0435\u0442\u0430,
+      \u0438 \u0434\u0438\u0430\u043B\u043E\u0433\u043E\u0432\u043E\u0435 \u043C\u0435\u043D\u044E
+      \u0437\u0430\u043A\u0440\u043E\u0435\u0442\u0441\u044F."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 1
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 1
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 10
+  - Description:
+    - "\u0412\u0430\u043C \u0441\u043B\u0435\u0434\u0443\u0435\u0442 \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C\u0441\u044F
+      \u0441 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C\u044E
+      \"\u041A\u0440\u0430\u0436\u0430\". \u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E,
+      \u044D\u0442\u043E \u043D\u0435 \u043E\u0447\u0435\u043D\u044C \u044D\u0442\u0438\u0447\u043D\u043E,
+      \u043D\u043E \u0438\u043D\u043E\u0433\u0434\u0430 \u0434\u0440\u0443\u0433\u043E\u0433\u043E
+      \u0432\u044B\u0445\u043E\u0434\u0430 \u043D\u0435\u0442."
+    - "\u0412 \u043D\u0430\u0448\u0435\u0439 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438
+      \u0432 \u044D\u0442\u043E\u043C \u043D\u0435\u0442 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u0438.
+      \u041D\u043E \u0432\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043E\u0431\u0443\u0447\u0438\u0442\u044C\u0441\u044F
+      \u044D\u0442\u043E\u0439 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0435."
+    - "\u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u0430 \u0432\u0430\u043C
+      \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0441\u044F
+      \u0432 \"\u0420\u0435\u0436\u0438\u043C \u0421\u043A\u0440\u044B\u0442\u043D\u043E\u0441\u0442\u0438\".
+      \u0414\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u044D\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C, \u0432\u0430\u043C
+      \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u043D\u0430\u0436\u0430\u0442\u044C
+      \u043A\u043D\u043E\u043F\u043A\u0443 \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 1
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 1
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 11
+  - Description:
+    - "\u0427\u0443\u0434\u043D\u043E, \u0442\u0435\u043F\u0435\u0440\u044C \u0432\u044B
+      \u0432 \"\u0420\u0435\u0436\u0438\u043C\u0435 \u0421\u043A\u0440\u044B\u0442\u043D\u043E\u0441\u0442\u0438\".
+      \u0412 \u044D\u0442\u043E\u043C \u0440\u0435\u0436\u0438\u043C\u0435 \u0432\u044B
+      \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
+      \u0447\u0435\u0440\u0435\u0437 \u0430\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u044B\u0445
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439, \u0430 \u0442\u0430\u043A\u0436\u0435
+      \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0442\u044C \u043D\u0430\u0432\u044B\u043A
+      \"\u0412\u043E\u0440\u043E\u0432\u0441\u0442\u0432\u043E\"."
+    - "\u0421\u0442\u043E\u0438\u0442 \u0443\u0442\u043E\u0447\u043D\u0438\u0442\u044C,
+      \u0447\u0442\u043E \u0432\u0430\u0448 \u043D\u0430\u0432\u044B\u043A \"\u0421\u043A\u0440\u044B\u0442\u043D\u043E\u0441\u0442\u044C\"
+      \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043E\u0442 \u043E\u0441\u0432\u0435\u0449\u0435\u043D\u0438\u044F."
+    - "\u0415\u0441\u043B\u0438 \u0432 \u043A\u043E\u043C\u043D\u0430\u0442\u0435
+      \u0442\u0435\u043C\u043D\u043E, \u0442\u043E \u043D\u0430\u0432\u044B\u043A
+      \u043F\u043E\u0432\u044B\u0441\u0438\u0442\u0441\u044F \u043D\u0430 25, \u0438
+      \u0432\u044B \u0443\u0432\u0438\u0434\u0438\u0442\u0435 \u043D\u0430\u0434
+      \u0441\u043E\u0431\u043E\u0439 \u043B\u0443\u043D\u0443, \u043D\u043E \u0435\u0441\u043B\u0438
+      \u0432 \u043A\u043E\u043C\u043D\u0430\u0442\u0435 \u0441\u0432\u0435\u0442\u043B\u043E,
+      \u0442\u043E  \u043D\u0430\u0432\u044B\u043A \u043F\u043E\u043D\u0438\u0437\u0438\u0442\u0441\u044F
+      \u043D\u0430 25, \u0438 \u0432\u044B \u0443\u0432\u0438\u0434\u0438\u0442\u0435
+      \u043D\u0430\u0434 \u0441\u043E\u0431\u043E\u0439 \u0441\u043E\u043B\u043D\u0446\u0435."
+    - "\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u044B \u0437\u043D\u0430\u0439\u0442\u0435,
+      \u043A\u0430\u043A \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \"\u0421\u043A\u0440\u044B\u0442\u043D\u043E\u0441\u0442\u044C\".
+      \u041F\u0435\u0440\u0435\u0439\u0434\u0435\u043C \u043A \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0435."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041A\u0440\u0430\u0436\u0430\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 1
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 1
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 1
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 12
+  - Description:
+    - "\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u044B \u0432\u0438\u0434\u0438\u0442\u0435
+      \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430,
+      \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0445\u043E\u0442\u0438\u0442\u0435
+      \u043E\u0431\u0432\u043E\u0440\u043E\u0432\u0430\u0442\u044C."
+    - "\u041D\u0438\u0447\u0435\u0433\u043E \u0441\u0432\u0435\u0440\u0445\u044A\u0435\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E
+      \u0442\u0443\u0442 \u043D\u0435 \u0431\u0443\u0434\u0435\u0442. \u0422\u043E\u043B\u044C\u043A\u043E
+      \u043F\u0430\u0440\u0443 \u043E\u0441\u043E\u0431\u0435\u043D\u043D\u043E\u0441\u0442\u0435\u0439."
+    - "\u041A\u043E\u0433\u0434\u0430 \u0432\u044B \u0431\u0443\u0434\u0435\u0442\u0435
+      \u043F\u0435\u0440\u0435\u0442\u0430\u0441\u043A\u0438\u0432\u0430\u0442\u044C
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442, \u0432\u044B \u0443\u0432\u0438\u0434\u0438\u0442\u0435
+      \u043D\u0430\u0434 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u043C \u0448\u0430\u043D\u0441
+      \u043A\u0440\u0430\u0436\u0438. \u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B \u043D\u0430 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435
+      \u0432\u0441\u0435\u0433\u0434\u0430 \u0431\u0443\u0434\u0443\u0442 \u0438\u043C\u0435\u0442\u044C
+      \u0448\u0430\u043D\u0441 \u043A\u0440\u0430\u0436\u0438 0."
+    - "\u0412\u0435\u0441 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430 \u0442\u0430\u043A\u0436\u0435
+      \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C
+      \u043A\u0440\u0430\u0436\u0438. \u0427\u0435\u043C \u043E\u043D \u0442\u044F\u0436\u0435\u043B\u0435\u0435,
+      \u0442\u0435\u043C \u043C\u0435\u043D\u044C\u0448\u0435 \u0448\u0430\u043D\u0441\u043E\u0432
+      \u043D\u0430 \u0443\u0441\u043F\u0435\u0445."
+    - "\u0415\u0441\u043B\u0438 \u0436\u0435 \u0432\u0430\u043C \u043D\u0435 \u0443\u0434\u0430\u0441\u0442\u0441\u044F
+      \u0443\u043A\u0440\u0430\u0441\u0442\u044C, \u0442\u043E \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436
+      \u043D\u0430\u043F\u0430\u0434\u0435\u0442 \u043D\u0430 \u0432\u0430\u0441.
+      \u0418\u043C\u0435\u0439\u0442\u0435 \u044D\u0442\u043E \u0432 \u0432\u0438\u0434\u0443!"
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0438 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442, \u043F\u043E\u043A\u0430 \u043D\u0435
+      \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
+      \u0432 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u0443\u044E \u044F\u0447\u0435\u0439\u043A\u0443
+      \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 1
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items:
+    - {fileID: 714208155773432568, guid: 2cd8672a95856cc4b8bc649ba574d550, type: 3}
+    - {fileID: 4671773967723695710, guid: d4ad17517bd24b345b656057b8997916, type: 3}
+    - {fileID: 2782887724703722662, guid: 5673b233222c8f941bb83599e7d25c39, type: 3}
+    - {fileID: 6726096146075049143, guid: c4e0ca283abe05740a095e019257c4c2, type: 3}
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 1
+    dragAndDropEndOff: 0
+    stealTrainingOn: 1
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 13
+  - Description:
+    - "\u041E\u043D \u0434\u0430\u0436\u0435 \u043D\u0435 \u0437\u0430\u043C\u0435\u0442\u0438\u043B!
+      \u041E\u0442\u043B\u0438\u0447\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430!"
+    - "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0442\u043E,
+      \u0447\u0442\u043E \u0445\u043E\u0442\u0435\u043B\u0438. \u0417\u0430\u043A\u0440\u043E\u0435\u043C
+      \"\u041C\u0435\u043D\u044E \u041E\u0431\u044B\u0441\u043A\u0430\"."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 1
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 1
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 1
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 14
+  - Description:
+    - "\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u0440\u043E\u0448\u043B\u0430
+      \u0443\u0441\u043F\u0435\u0448\u043D\u043E!"
+    - "\u041F\u043E\u0440\u0430 \u0432\u044B\u0439\u0442\u0438 \u0438\u0437 \"\u0420\u0435\u0436\u0438\u043C\u0430
+      \u0421\u043A\u0440\u044B\u0442\u043D\u043E\u0441\u0442\u0438\"."
+    - "\u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u0430 \u0432\u0430\u043C
+      \u043D\u0443\u0436\u043D\u043E \u0441\u043D\u043E\u0432\u0430 \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0441\u044F.
+      \u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0442\u0443 \u0436\u0435 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 1
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 1
+    stealthButtonEndOn: 1
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 1
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 15
+  - Description:
+    - "\u0423 \u0432\u0430\u0441 \u0441\u043E\u0431\u0440\u0430\u043B\u043E\u0441\u044C
+      \u043A\u0430\u043A\u043E\u0435-\u0442\u043E \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+      \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u043E\u0432. \u042D\u0442\u043E
+      \u043E\u0442\u043B\u0438\u0447\u043D\u0430\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+      \u043E\u0431\u0443\u0447\u0438\u0442\u044C \u0432\u0430\u0441 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044E
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432."
+    - "\u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u0432\u0430\u043C \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F
+      \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E \u043D\u0430\u0443\u043A\u0438.
+      \u0412 \u044D\u0442\u043E\u043C \u043C\u0435\u043D\u044E \u0432\u0430\u043C
+      \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u0441\u044F
+      \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u0441\u043E\u0437\u0434\u0430\u0432\u0430\u0442\u044C
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E \u043D\u0430\u0443\u043A\u0438."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 1
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 1
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 1
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 1
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 1
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 16
+  - Description:
+    - "\u0412\u044B \u0443\u0436\u0435 \u043F\u0435\u0440\u0435\u0448\u043B\u0438
+      \u0432 \u043C\u0435\u043D\u044E \u043D\u0430\u0443\u043A\u0438? \u041D\u0435\u043F\u043B\u043E\u0445\u043E!
+      \u041F\u043E\u0440\u0430 \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C\u0441\u044F. "
+    - "\u0412 \u044D\u0442\u043E\u043C \u043C\u0435\u043D\u044E \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435
+      \u0441\u043E\u0437\u0434\u0430\u0432\u0430\u0442\u044C \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B: \u043E\u0440\u0443\u0436\u0438\u0435,
+      \u0431\u043E\u0435\u043F\u0440\u0438\u043F\u0430\u0441\u044B, \u0433\u0440\u0430\u043D\u0430\u0442\u044B
+      \u0438 \u043C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u044B."
+    - "\u041D\u043E \u0434\u043B\u044F \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F
+      \u0447\u0435\u0433\u043E-\u043B\u0438\u0431\u043E, \u043E\u0442 \u0432\u0430\u0441
+      \u043F\u043E\u0442\u0440\u0435\u0431\u0443\u044E\u0442\u0441\u044F \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u044B\u0435
+      \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u044B \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435
+      \u043D\u0430\u0432\u044B\u043A\u0430 \"\u041D\u0430\u0443\u043A\u0430\"."
+    - "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043E\u0437\u0434\u0430\u0442\u044C
+      \u0447\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C. \u041D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,
+      \u043F\u0430\u0442\u0440\u043E\u043D\u044B."
+    - "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0443
+      \"\u0411\u043E\u0435\u043F\u0440\u0438\u043F\u0430\u0441\u044B\", \u043D\u0430\u0436\u0430\u0432
+      \u043A\u043D\u043E\u043F\u043A\u0443 \u0441\u0432\u0435\u0440\u0445\u0443.
+      \u0417\u0430\u0442\u0435\u043C \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430
+      \u0432\u0442\u043E\u0440\u043E\u0439 \u0447\u0435\u0440\u0442\u0435\u0436 -
+      \u0441\u043F\u0440\u0430\u0432\u0430 \u043E\u0442\u043A\u0440\u043E\u0435\u0442\u0441\u044F
+      \u043C\u0435\u043D\u044E \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F.
+      \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+      \"\u0421\u043E\u0437\u0434\u0430\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 1
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items:
+    - {fileID: 714208155773432568, guid: 2cd8672a95856cc4b8bc649ba574d550, type: 3}
+    - {fileID: 4671773967723695710, guid: d4ad17517bd24b345b656057b8997916, type: 3}
+    - {fileID: 581209913345683369, guid: 8cab2ab7e89f3ed40838d96a97eafb00, type: 3}
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 1
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 17
+  - Description:
+    - "\u0412\u044B \u043F\u0440\u0438\u0440\u043E\u0436\u0434\u0435\u043D\u043D\u044B\u0439
+      \u0438\u043D\u0436\u0435\u043D\u0435\u0440! \u0412\u0430\u043C \u0441\u043B\u0435\u0434\u0443\u0435\u0442
+      \u0437\u0430\u0434\u0443\u043C\u0430\u0442\u044C\u0441\u044F \u043E\u0431 \u044D\u0442\u043E\u043C
+      \u0432 \u0431\u0443\u0434\u0443\u0449\u0435\u043C!"
+    - "\u0412 \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u043C, \u0435\u0441\u043B\u0438
+      \u0432\u044B \u0431\u0443\u0434\u0435\u0442\u0435 \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0442\u044C
+      \u043D\u0430\u0432\u044B\u043A \"\u041D\u0430\u0443\u043A\u0430\", \u0442\u043E
+      \u0432\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u0441\u043E\u0437\u0434\u0430\u0432\u0430\u0442\u044C
+      \u043C\u043E\u0449\u043D\u0435\u0439\u0448\u0435\u0435 \u043E\u0440\u0443\u0436\u0438\u0435
+      \u0438\u0437 \u043C\u0443\u0441\u043E\u0440\u0430."
+    - "\u0417\u0430\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0435\u043D\u044E
+      \u043D\u0430\u0443\u043A\u0438, \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 1
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 1
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 18
+  - Description:
+    - "\u0412\u044B \u0443\u0436\u0435 \u043C\u043D\u043E\u0433\u043E\u043C\u0443
+      \u043E\u0431\u0443\u0447\u0438\u043B\u0438\u0441\u044C, \u043D\u043E \u0440\u0430\u0441\u0441\u043B\u0430\u0431\u043B\u044F\u0442\u044C\u0441\u044F
+      \u043D\u0435 \u0441\u0442\u043E\u0438\u0442!"
+    - "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435 \u043D\u0430
+      \u0441\u0432\u043E\u0435 \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435."
+    - "\u0414\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u044D\u0442\u043E \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435,
+      \u0432\u0430\u043C \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u043D\u0430\u0436\u0430\u0442\u044C
+      \u043A\u043D\u043E\u043F\u043A\u0443 \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 1
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 1
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 1
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 19
+  - Description:
+    - "\u0412 \u043C\u0435\u043D\u044E \u0441\u043D\u0430\u0440\u0435\u0436\u0435\u043D\u0438\u044F
+      \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0443\u0437\u043D\u0430\u0442\u044C:
+      \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0434\u0435\u043D\u0435\u0433,
+      \u0432\u0435\u0441 \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u044F,
+      \u0431\u043E\u0435\u0432\u044B\u0435 \u0438 \u0437\u0430\u0449\u0438\u0442\u043D\u044B\u0435
+      \u043F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u0438."
+    - "\u0410 \u0442\u0430\u043A\u0436\u0435 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435
+      \u0441\u043D\u0430\u0440\u044F\u0434\u0438\u0442\u044C\u0441\u044F \u043E\u0440\u0443\u0436\u0438\u0435\u043C,
+      \u0431\u0440\u043E\u043D\u0435\u0439, \u0440\u044E\u043A\u0437\u0430\u043A\u043E\u043C,
+      \u0433\u0440\u0430\u043D\u0430\u0442\u0430\u043C\u0438 \u0438 \u043C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u0430\u043C\u0438."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0438 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442, \u043F\u043E\u043A\u0430 \u043D\u0435
+      \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
+      \u0432 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0443\u044E
+      \u044F\u0447\u0435\u0439\u043A\u0443 \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u044F.
+      \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435
+      \u0433\u0440\u0430\u043D\u0430\u0442\u0443 \u0438 \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 1
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 1
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 1
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 1
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 20
+  - Description:
+    - "\u0422\u0435\u043F\u0435\u0440\u044C \u044D\u0442\u0438 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
+      \u0432\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C,
+      \u043D\u043E \u0441\u0435\u0439\u0447\u0430\u0441 \u0432\u044B \u044D\u0442\u043E\u0433\u043E
+      \u0434\u0435\u043B\u0430\u0442\u044C \u043D\u0435 \u0431\u0443\u0434\u0435\u0442\u0435. "
+    - "\u0421\u043D\u0430\u0440\u044F\u0434\u0438\u043B\u0438\u0441\u044C, \u0430
+      \u0442\u0435\u043F\u0435\u0440\u044C \u0434\u0432\u0438\u0433\u0430\u0435\u043C\u0441\u044F
+      \u0434\u0430\u043B\u044C\u0448\u0435."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 1
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 1
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 1
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 21
+  - Description:
+    - "\u0425\u043E\u0442\u0438\u0442\u0435 \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
+      \u0434\u0430\u043B\u044C\u0448\u0435? \u0423\u0432\u044B, \u0434\u0432\u0435\u0440\u044C
+      \u0437\u0430\u043A\u0440\u044B\u0442\u0430, \u0430 \u0432\u0430\u0448\u0435\u0433\u043E
+      \u0432\u0430\u0448 \u043D\u0430\u0432\u044B\u043A \"\u0412\u0437\u043B\u043E\u043C\"
+      \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043D\u0438\u0437\u043E\u043A."
+    - "\u0415\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435,
+      \u0447\u0442\u043E \u0432\u0430\u043C \u043E\u0441\u0442\u0430\u0435\u0442\u0441\u044F,
+      \u044D\u0442\u043E \u0443\u0431\u0438\u0442\u044C \u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E\u0433\u043E
+      \u0438 \u0437\u0430\u0431\u0440\u0430\u0442\u044C \u0441 \u0435\u0433\u043E
+      \u0442\u0440\u0443\u043F\u0430 \u043A\u043B\u044E\u0447."
+    - "\u041A\u043E\u0433\u0434\u0430 \u0432\u044B \u043D\u0430\u043F\u0430\u0434\u0430\u0439\u0442\u0435
+      \u043D\u0430 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430, \u0435\u0433\u043E
+      \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0438 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
+      \u0441\u0442\u0430\u043D\u043E\u0432\u044F\u0442\u0441\u044F \u0430\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u044B\u043C\u0438.
+      \u041D\u0435 \u0432\u043E\u043B\u043D\u0443\u0439\u0442\u0435\u0441\u044C,
+      \u0443 \u044D\u0442\u043E\u0433\u043E \u0431\u0435\u0434\u043D\u044F\u0433\u0438
+      \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044E\u0442 \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0438."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041D\u0430\u043F\u0430\u0441\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 1
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 1
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 1
+    healButtonEndOn: 0
+    healButtonOff: 1
+    Complete: 0
+    Active: 0
+    NextPart: 22
+  - Description:
+    - "\u0411\u043E\u0439 \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442
+      \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438.
+      \u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E
+      \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0433\u0440\u0430\u043D\u0430\u0442\u044B \u0438 \u043C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u044B."
+    - "\u0428\u0430\u043D\u0441 \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u044F
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439 \u0437\u0430\u0432\u0438\u0441\u0438\u0442
+      \u043E\u0442 \u0432\u0430\u0448\u0438\u0445 \u0431\u043E\u0435\u0432\u044B\u0445
+      \u043D\u0430\u0432\u044B\u043A\u043E\u0432. \u0412 \u0434\u0430\u043D\u043D\u043E\u043C
+      \u0441\u043B\u0443\u0447\u0430\u0435, \u044D\u0442\u043E \u043D\u0430\u0432\u044B\u043A
+      \"\u0411\u0435\u0437 \u041E\u0440\u0443\u0436\u0438\u044F\"."
+    - "\u0412\u0430\u0448\u0438 \u0430\u0442\u0430\u043A\u0438 \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u043C
+      \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043F\u043E\u0440\u0430\u0436\u0430\u044E\u0442
+      \u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0441\u0442\u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430.
+      \u0415\u0441\u043B\u0438 \u0432\u044B \u043F\u043E\u043F\u0430\u0434\u0435\u0442\u0435
+      \u0432 \u0433\u043E\u043B\u043E\u0432\u0443 \u0438\u043B\u0438 \u0432 \u043F\u0430\u0445,
+      \u0442\u043E \u043D\u0430\u043D\u0435\u0441\u0435\u0442\u0435 \u043A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0443\u0440\u043E\u043D."
+    - "\u041C\u044B \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u0438
+      \u0431\u043E\u0439 \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B \u043C\u043E\u0433\u043B\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0433\u0440\u0430\u043D\u0430\u0442\u0443."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u043F\u0440\u0430\u0432\u043E\u043C \u043D\u0438\u0436\u043D\u0435\u043C
+      \u0443\u0433\u043B\u0443, \u0447\u0442\u043E\u0431\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0433\u0440\u0430\u043D\u0430\u0442\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 05000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 1
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 1
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 1
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 1
+    grenadeButtonOff: 1
+    healButtonEndOn: 0
+    healButtonOff: 1
+    Complete: 0
+    Active: 0
+    NextPart: 23
+  - Description:
+    - "\u041A\u0430\u043A \u0432\u044B \u0432\u0438\u0434\u0438\u0442\u0435, \u0433\u0440\u0430\u043D\u0430\u0442\u044B
+      \u043E\u0447\u0435\u043D\u044C \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B
+      \u0432 \u0431\u043E\u044E."
+    - "\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043F\u043E\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435
+      \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435, \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0432
+      \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    - "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u044C
+      \u043B\u0435\u0447\u0435\u043D\u0438\u044F \u0437\u0430\u0432\u0438\u0441\u0438\u0442
+      \u043E\u0442 \u0432\u0430\u0448\u0435\u0433\u043E \u043D\u0430\u0432\u044B\u043A\u0430
+      \"\u041C\u0435\u0434\u0438\u0446\u0438\u043D\u0430\"."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u043F\u0440\u0430\u0432\u043E\u043C \u043D\u0438\u0436\u043D\u0435\u043C
+      \u0443\u0433\u043B\u0443, \u0447\u0442\u043E\u0431\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 05000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 1
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 1
+    healButtonOff: 1
+    Complete: 0
+    Active: 0
+    NextPart: 24
+  - Description:
+    - "\u041F\u043E\u0431\u0435\u0434\u0430 \u043D\u0430\u0434 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C
+      \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u0430\u043C \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C
+      \u0435\u0433\u043E \u0442\u0440\u0443\u043F."
+    - "\u041E\u0431\u044B\u0449\u0438\u0442\u0435 \u0435\u0433\u043E \u0442\u0440\u0443\u043F
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0437\u0430\u0431\u0440\u0430\u0442\u044C \u043A\u043B\u044E\u0447 \u043E\u0442
+      \u0434\u0432\u0435\u0440\u0438."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0442\u0440\u0443\u043F\u0430
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 05000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 1
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 1
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 25
+  - Description:
+    - "\u041A\u043B\u044E\u0447\u0438 \u043E\u0442 \u0434\u0432\u0435\u0440\u0435\u0439
+      \u043F\u043E\u0434\u0431\u0438\u0440\u0430\u044E\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438,
+      \u0438 \u0442\u0435\u043F\u0435\u0440\u044C \u0434\u0432\u0435\u0440\u0438
+      \u043E\u0442\u043A\u0440\u044B\u0442\u044B."
+    - "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
+      \u0442\u0430\u043A\u0436\u0435 \u043F\u043E\u0434\u0431\u0438\u0440\u0430\u044E\u0442\u0441\u044F
+      \u0438 \u0434\u0435\u043D\u044C\u0433\u0438. \u041F\u0440\u043E\u0448\u0443
+      \u0437\u0430\u043C\u0435\u0442\u0438\u0442\u044C, \u0447\u0442\u043E \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+      \u0432\u0430\u0448\u0438\u0445 \u0434\u0435\u043D\u0435\u0433 \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u043B\u043E\u0441\u044C."
+    - "\u0414\u043B\u044F \u0447\u0435\u0433\u043E \u043D\u0443\u0436\u043D\u044B
+      \u0434\u0435\u043D\u044C\u0433\u0438? \u0412 \u044D\u0442\u043E\u043C \u0432\u043E\u043F\u0440\u043E\u0441\u0435
+      \u0432\u044B \u0440\u0430\u0437\u0431\u0435\u0440\u0435\u0442\u0435\u0441\u044C
+      \u0441\u0430\u043C\u043E\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 05000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 1
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 1
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 26
+  - Description:
+    - "\u041A\u043B\u044E\u0447\u0438 \u0443 \u0432\u0430\u0441, \u043F\u043E\u0440\u0430
+      \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u0434\u0430\u043B\u044C\u0448\u0435.
+      \u0413\u043E\u0442\u043E\u0432\u044B?"
+    - "\u0412\u0430\u0441 \u043D\u0435 \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C!
+      \u0422\u043E\u0433\u0434\u0430 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0439\u0442\u0435
+      \u0434\u0432\u0435\u0440\u0438, \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442\u0435
+      \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443
+      \u0438 \u043F\u043E\u0434\u043D\u0438\u043C\u0430\u0439\u0442\u0435\u0441\u044C
+      \u043F\u043E \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0435."
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0434\u0432\u0435\u0440\u0438
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
+      \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0438\u0442\u0435
+      \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435 \u043A\u043E\u043C\u043D\u0430\u0442\u044B."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 03000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 27
+  - Description:
+    - "\u0412\u0430\u0448\u0435 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435
+      \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442 \u043A \u043A\u043E\u043D\u0446\u0443.
+      \u041D\u0435\u043C\u043D\u043E\u0433\u043E \u0442\u0435\u043E\u0440\u0438\u0438,
+      \u0438 \u0432\u044B \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u044B."
+    - "\u041E\u0437\u043D\u0430\u043A\u043E\u043C\u0442\u0435\u0441\u044C \u0441
+      \u0432\u0430\u0448\u0438\u043C\u0438 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u043C\u0438
+      \u0445\u0430\u0440\u0430\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0430\u043C\u0438."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 03000000
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 1
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 1
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 1
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 1
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 28
+  - Description:
+    - "\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043C\u0441\u044F.
+      \u0412\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F
+      \u0441 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0430\u043C\u0438."
+    - "\u0422\u0443\u0442 \u0443\u043A\u0430\u0437\u0430\u043D\u044B 4 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0435
+      \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0438:
+      \"\u0421\u0438\u043B\u0430\", \"\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C\",
+      \"\u0418\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442\" \u0438 \"\u0425\u0430\u0440\u0438\u0437\u043C\u0430\".
+      \u041E\u043D\u0438 \u0437\u0430\u0434\u0430\u044E\u0442\u0441\u044F \u043F\u0440\u0438
+      \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0438 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430."
+    - "\u0422\u0430\u043A\u0436\u0435 \u0435\u0441\u0442\u044C 10 \u043D\u0430\u0432\u044B\u043A\u043E\u0432,
+      \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0437\u0430\u0432\u0438\u0441\u044F\u0442
+      \u043E\u0442 \u0432\u0430\u0448\u0438\u0445 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0445
+      \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A.
+      \u0418\u0445 \u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C,
+      \u043A\u043E\u0433\u0434\u0430 \u0432\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435
+      \u043D\u043E\u0432\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C."
+    - "\u041E\u0441\u0442\u0430\u043B\u044C\u043D\u043E\u0435 \u043D\u0435 \u0442\u0430\u043A
+      \u0432\u0430\u0436\u043D\u043E, \u0434\u0432\u0438\u0433\u0430\u0435\u043C\u0441\u044F
+      \u0434\u0430\u043B\u044C\u0448\u0435."
+    - "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0443
+      \"\u041F\u0435\u0440\u043A\u0438\", \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0441\u0432\u0435\u0440\u0445\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 1
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 1
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 29
+  - Description:
+    - "\u041F\u0435\u0440\u0435\u0434 \u0432\u0430\u043C\u0438 \u043C\u0435\u043D\u044E
+      \u043F\u0435\u0440\u043A\u043E\u0432. \u0413\u043E\u0442\u043E\u0432\u044B
+      \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F?"
+    - "\u041E\u0442\u043B\u0438\u0447\u043D\u043E! \u041F\u0435\u0440\u043A\u0438,
+      \u043A\u0430\u043A \u0438 \u043D\u0430\u0432\u044B\u043A\u0438, \u0443\u0441\u0438\u043B\u0438\u0432\u0430\u044E\u0442
+      \u0432\u0430\u0448\u0435\u0433\u043E \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430.
+      \u0412\u0430\u043C \u0434\u0430\u044E\u0442 1 \u043E\u0447\u043A\u043E \u043F\u0435\u0440\u043A\u0430
+      \u0437\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0432\u0442\u043E\u0440\u043E\u0439
+      \u0443\u0440\u043E\u0432\u0435\u043D\u044C."
+    - "\u041F\u0435\u0440\u043A \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
+      \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D, \u0435\u0441\u043B\u0438
+      \u0443 \u0432\u0430\u0441 \u043D\u0435\u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E
+      \u043D\u0430\u0432\u044B\u043A\u0430. \u041D\u0430 \u044D\u0442\u043E \u0432\u0441\u0435."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E \u043F\u0435\u0440\u043A\u043E\u0432."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 1
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 1
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 30
+  - Description:
+    - "\u0415\u0449\u0435 \u0447\u0443\u0442\u044C-\u0447\u0443\u0442\u044C. \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
+      \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0435 \u043C\u0435\u043D\u044E."
+    - "\u041C\u0435\u043D\u044E \u0437\u0430\u0434\u0430\u043D\u0438\u0439 \u0438
+      \u0433\u043B\u043E\u0431\u0430\u043B\u044C\u043D\u0430\u044F \u043A\u0430\u0440\u0442\u0430."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+      \u043C\u0435\u043D\u044E \u0437\u0430\u0434\u0430\u043D\u0438\u0439."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 1
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 1
+    mapOn: 1
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 1
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 1
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 31
+  - Description:
+    - "\u0422\u0443\u0442 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+      \u0441\u043F\u0438\u0441\u043E\u043A \u0432\u0430\u0448\u0438\u0445 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u0445
+      \u0438 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u044B\u0445 \u0437\u0430\u0434\u0430\u043D\u0438\u0439."
+    - "\u041D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439 \u043C\u043E\u043C\u0435\u043D\u0442
+      \u0443 \u0432\u0430\u0441 \u0434\u0432\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u044F.
+      \u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435
+      \u043F\u043E\u0437\u0432\u043E\u043B\u0438\u0442 \u0432\u0430\u043C \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u044C
+      \u0438\u0433\u0440\u0443, \u0438 \u0432\u0442\u043E\u0440\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E\u0435."
+    - "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0443
+      \"\u041A\u0430\u0440\u0442\u0430\", \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0441\u0432\u0435\u0440\u0445\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 1
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 32
+  - Description:
+    - "\u041D\u0430 \u043A\u0430\u0440\u0442\u0435 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435
+      \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C, \u0432 \u043A\u0430\u043A\u043E\u0439
+      \u043B\u043E\u043A\u0430\u0446\u0438\u0438 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+      \u0432\u0430\u0448 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436."
+    - "\u0421\u0435\u0439\u0447\u0430\u0441 \u0443 \u0432\u0430\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u0430
+      \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u0430\u044F \u043E\u0431\u043B\u0430\u0441\u0442\u044C
+      \u043A\u0430\u0440\u0442\u044B, \u043D\u043E \u0432 \u0431\u0443\u0434\u0443\u0449\u0435\u043C
+      \u0432 \u043E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u0435\u0435 \u0432\u0441\u044E!"
+    - "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C
+      \u043F\u043E \u043A\u0430\u0440\u0442\u0435, \u043D\u043E \u0434\u043B\u044F
+      \u044D\u0442\u043E\u0433\u043E \u043D\u0443\u0436\u043D\u043E \u0432\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F
+      \u0432\u044B\u0445\u043E\u0434\u043E\u043C \u0438\u0437 \u043B\u043E\u043A\u0430\u0446\u0438\u0438."
+    - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
+      \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
+      \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
+      \u0433\u043B\u043E\u0431\u0430\u043B\u044C\u043D\u0443\u044E \u043A\u0430\u0440\u0442\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 1
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 0
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 1
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 33
+  - Description:
+    - "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u044F\u044E \u0432\u0430\u0441,
+      \u0432\u044B \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0438 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435!"
+    - "\u0412\u044B \u043E\u0431\u0443\u0447\u0438\u043B\u0438\u0441\u044C \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u043C
+      \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0430\u043C \u0438\u0433\u0440\u044B.
+      \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0441 \u043C\u043E\u0436\u043D\u043E
+      \u0441\u043C\u0435\u043B\u043E \u043E\u0442\u043F\u0443\u0441\u043A\u0430\u0442\u044C!"
+    - "\u041D\u0435 \u0437\u0430\u0431\u044B\u0432\u0430\u0439\u0442\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F!
+      \u0418 \u043D\u0435 \u0431\u043E\u0439\u0442\u0435\u0441\u044C \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C
+      \u0438\u0433\u0440\u0443 \u0437\u0430\u043D\u043E\u0432\u043E. \u0414\u0440\u0443\u0433\u043E\u0435
+      \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u0438\u0435
+      \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0445 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A
+      \u043F\u043E\u0437\u0432\u043E\u043B\u0438\u0442 \u0432\u0430\u043C \u0438\u0433\u0440\u0430\u0442\u044C
+      \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443."
+    - "\u0412\u0437\u043B\u043E\u043C\u0430\u0439\u0442\u0435 \u044D\u0442\u0443
+      \u0447\u0435\u0440\u0442\u043E\u0432\u0443 \u0434\u0432\u0435\u0440\u044C \u0438
+      \u043D\u0430\u0447\u043D\u0438\u0442\u0435 \u0441\u0432\u043E\u0438 \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F!"
+    - "\u041A\u043E\u0441\u043D\u0438\u0442\u0435\u0441\u044C \u0434\u0432\u0435\u0440\u0438
+      \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \"\u0412\u0437\u043B\u043E\u043C\u0430\u0442\u044C\", \u0430 \u0437\u0430\u0442\u0435\u043C
+      \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
+      \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435
+      \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443."
+    Room: {fileID: 0}
+    interactableObjectIndexActiveT: 04000000
+    interactableObjectIndexActiveF: 
+    stealthOn: 0
+    stealthOff: 0
+    combatOn: 0
+    combatOff: 0
+    inventoryOpen: 0
+    inventoryClose: 0
+    dialogueOpen: 0
+    dialogueClose: 0
+    craftingOpen: 0
+    craftingClose: 0
+    statsOpen: 0
+    statsClose: 0
+    perksOpen: 0
+    perksClose: 0
+    questOpen: 0
+    questClose: 0
+    mapOpen: 0
+    mapClose: 0
+    crafingBlueprintsOn: 0
+    crafingBlueprintsOff: 0
+    perksOn: 0
+    perksOff: 0
+    mapOn: 0
+    mapOff: 1
+    closeInventoryButtonOn: 0
+    closeInventoryButtonOff: 0
+    closeInventoryButtonEndOn: 0
+    closeInventoryButtonEndOff: 0
+    closeCraftButtonEndOn: 0
+    closeCraftButtonEndOff: 0
+    closeStatsButtonEndOn: 0
+    closeStatsButtonEndOff: 0
+    closeQuestButtonEndOn: 0
+    closeQuestButtonEndOff: 0
+    attackButtonOn: 0
+    attackButtonOff: 0
+    attackButtonEndOn: 0
+    attackButtonEndOff: 0
+    dialogueButtonOn: 0
+    dialogueButtonOff: 0
+    dialogueButtonEndOn: 0
+    dialogueButtonEndOff: 0
+    inventoryButtonOn: 0
+    inventoryButtonOff: 0
+    inventoryButtonEndOn: 0
+    inventoryButtonEndOff: 0
+    stealthButtonOn: 0
+    stealthButtonOff: 0
+    stealthButtonEndOn: 0
+    stealthButtonEndOff: 0
+    useButtonOn: 0
+    useButtonOff: 0
+    useButtonEndOn: 0
+    useButtonEndOff: 0
+    items: []
+    checkGrenade_checkHeal: 0
+    checkEnemyHealth: 0
+    checkUseHeal: 0
+    dragAndDropOn: 0
+    dragAndDropOff: 0
+    dragAndDropEndOn: 0
+    dragAndDropEndOff: 0
+    stealTrainingOn: 0
+    stealTrainingOff: 0
+    craftButtonEndOn: 0
+    craftButtonEndOff: 0
+    statsButtonEndOn: 0
+    statsButtonEndOff: 0
+    questButtonEndOn: 0
+    questButtonEndOff: 0
+    combatTrainingEndOn: 0
+    combatTrainingEndOff: 0
+    grenadeButtonEndOn: 0
+    grenadeButtonOff: 0
+    healButtonEndOn: 0
+    healButtonOff: 0
+    Complete: 0
+    Active: 0
+    NextPart: 33
+--- !u!1 &8807494933484625714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6801120591800045207}
+  - component: {fileID: 6543014093026901506}
+  - component: {fileID: 8856465617592412146}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6801120591800045207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807494933484625714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50000405, y: 0.50000405, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8460044268534925809}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00040245, y: 0.00015068}
+  m_SizeDelta: {x: 500, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6543014093026901506
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807494933484625714}
+  m_CullTransparentMesh: 1
+--- !u!114 &8856465617592412146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807494933484625714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 85
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041D\u0435\u0442"
+--- !u!1 &9079323673525757383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3532580805341457284}
+  - component: {fileID: 6171149859739804023}
+  - component: {fileID: 7891653799643889390}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3532580805341457284
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079323673525757383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50000405, y: 0.50000405, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100467950182890662}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00040245, y: 0.00015068}
+  m_SizeDelta: {x: 500, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6171149859739804023
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079323673525757383}
+  m_CullTransparentMesh: 1
+--- !u!114 &7891653799643889390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079323673525757383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b26a445dd36812a4eb8e4d2fd83d9810, type: 3}
+    m_FontSize: 85
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0414\u0430"
+--- !u!1 &9202409354327446926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8483279258281741432}
+  - component: {fileID: 5981029970183396314}
+  - component: {fileID: 822190460499684743}
+  m_Layer: 5
+  m_Name: Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8483279258281741432
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202409354327446926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6599509978754242044}
+  - {fileID: 313798976860926742}
+  - {fileID: 2078246236810433195}
+  - {fileID: 8460044268534925809}
+  - {fileID: 8100467950182890662}
+  m_Father: {fileID: 106236524666048035}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.000039101, y: 224.91998}
+  m_SizeDelta: {x: 960, y: 450}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5981029970183396314
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202409354327446926}
+  m_CullTransparentMesh: 1
+--- !u!114 &822190460499684743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202409354327446926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1

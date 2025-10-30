@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6202362691794393076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6204256304030097620}
+  - component: {fileID: 8134826089453450553}
+  m_Layer: 0
+  m_Name: 9mm Pistol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6204256304030097620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202362691794393076}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8134826089453450553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202362691794393076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2506b1420aca78b40849cd1adbad2198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 40
+  itemName: "9\u043C\u043C \u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
+  englishItemName: 9mm Pistol
+  indonesianItemName: Pistol 9mm
+  itemDescription: "\u0421\u0430\u043C\u044B\u0439 \u0440\u0430\u0441\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0439
+    \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442 \u0432 \u043C\u0438\u0440\u0435.
+    \u041D\u043E \u044D\u0442\u043E \u043D\u0435 \u043E\u0442\u043C\u0435\u043D\u044F\u0435\u0442
+    \u0435\u0433\u043E \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438."
+  englishItemDescription: The most common pistol in the world. But this does not
+    negate its effectiveness.
+  indonesianItemDescription: Pistol paling umum di dunia. Tetapi ini tidak meniadakan
+    keefektifannya.
+  itemType: 0
+  stack: 0
+  number: 1
+  cost: 250
+  weight: 3
+  itemTypeSprite: {fileID: 21300000, guid: ec1844939f9e5c6448f49e26fe2946d0, type: 3}
+  itemSprite: {fileID: 21300000, guid: bea314ed299fd794b96a51fb6aef6ef1, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 2
+  weaponType: 2
+  damageType: 1
+  minDamage: 5
+  maxDamage: 12
+  distance: 25
+  attackTime: 1.75
+  ammoName: "9\u043C\u043C"
+  effect: {fileID: 5503289395628209677, guid: 1e45be6f5178776428daea6231eb48ad, type: 3}
+  projectile: {fileID: -6169321323404626271, guid: 3b1cf1a56bf3d6145af55a6ad36d38cf, type: 3}

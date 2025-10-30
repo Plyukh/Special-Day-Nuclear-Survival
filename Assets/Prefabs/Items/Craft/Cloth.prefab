@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7624722622076276852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7627368477905396284}
+  - component: {fileID: 5758113484935884056}
+  m_Layer: 0
+  m_Name: Cloth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7627368477905396284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624722622076276852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5758113484935884056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624722622076276852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44cdaaf2b51fd2429c72502eab4e251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 17
+  itemName: "\u0422\u043A\u0430\u043D\u044C"
+  englishItemName: Cloth
+  indonesianItemName: Kain
+  itemDescription: "\u0422\u043A\u0430\u043D\u044C, \u043D\u0438\u043A\u043E\u0433\u0434\u0430
+    \u043D\u0435 \u0443\u0433\u0430\u0434\u0430\u0435\u0448\u044C, \u043A\u043E\u0433\u0434\u0430
+    \u043E\u043D\u0430 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0433\u043E\u0434\u0438\u0442\u0441\u044F."
+  englishItemDescription: Fabric, you never know when it might come in handy.
+  indonesianItemDescription: Kain, kamu tidak pernah tahu kapan itu akan berguna.
+  itemType: 7
+  stack: 0
+  number: 1
+  cost: 5
+  weight: 1
+  itemTypeSprite: {fileID: 21300000, guid: ebaa2d030c2f27c4589a7ecda67d07b1, type: 3}
+  itemSprite: {fileID: 21300000, guid: c997ea511c1038542b250add4444e71f, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 0

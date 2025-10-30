@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4596670651259267265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3783436240065786491}
+  - component: {fileID: 7732325238130086081}
+  m_Layer: 0
+  m_Name: Combat Armor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3783436240065786491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596670651259267265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7732325238130086081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596670651259267265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf154624dd69bc140b2b59813b060f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 8
+  itemName: "\u0411\u043E\u0435\u0432\u0430\u044F \u0411\u0440\u043E\u043D\u044F"
+  englishItemName: Combat Armor
+  indonesianItemName: Combat Armor
+  itemDescription: "\u0412\u044B\u0441\u043E\u043A\u043E\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0447\u043D\u0430\u044F
+    \u0431\u0440\u043E\u043D\u044F, \u0438\u0437\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u043D\u0430\u044F
+    \u0438\u0437 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0445 \u0437\u0430\u0449\u0438\u0442\u043D\u044B\u0445
+    \u043F\u043E\u043B\u0438\u043C\u0435\u0440\u043E\u0432."
+  englishItemDescription: High-tech armor made from improved protective polymers.
+  indonesianItemDescription: Zirah berteknologi tinggi yang terbuat dari polimer
+    pelindung yang telah ditingkatkan.
+  itemType: 2
+  stack: 0
+  number: 1
+  cost: 6500
+  weight: 20
+  itemTypeSprite: {fileID: 21300000, guid: 490ffe19d36c65c46921598393b817b5, type: 3}
+  itemSprite: {fileID: 21300000, guid: 4abaadb2dcbdcb7469949639d85b4fcd, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 0
+  damageTypes: 0000000001000000020000000300000004000000
+  protection: 4b00000046000000140000000f0000000a000000

@@ -1,0 +1,19 @@
+{
+    "name": "IconCreatorEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:628de16f4e8a09d48a9a05003b10efa9",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

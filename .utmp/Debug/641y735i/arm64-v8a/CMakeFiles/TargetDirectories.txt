@@ -1,0 +1,5 @@
+P:/Unity/Special/.utmp/Debug/641y735i/arm64-v8a/CMakeFiles/edit_cache.dir
+P:/Unity/Special/.utmp/Debug/641y735i/arm64-v8a/CMakeFiles/rebuild_cache.dir
+P:/Unity/Special/.utmp/Debug/641y735i/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+P:/Unity/Special/.utmp/Debug/641y735i/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+P:/Unity/Special/.utmp/Debug/641y735i/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

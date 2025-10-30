@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4166346371320247191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4162097848538278123}
+  - component: {fileID: 7754395899131787768}
+  m_Layer: 0
+  m_Name: Hunting Shotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4162097848538278123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166346371320247191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7754395899131787768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166346371320247191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2506b1420aca78b40849cd1adbad2198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 45
+  itemName: "\u041E\u0445\u043E\u0442\u043D\u0438\u0447\u0438\u0439 \u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+  englishItemName: Hunting Shotgun
+  indonesianItemName: Senapan Berburu
+  itemDescription: "\u0411\u043E\u0435\u0432\u043E\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A
+    12 \u043A\u0430\u043B\u0438\u0431\u0440\u0430. \u0412\u0441\u0435 \u0435\u0449\u0435
+    \u0432 \u0445\u043E\u0440\u043E\u0448\u0435\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438.
+    \u041D\u0430\u0434\u0435\u0436\u043D\u044B\u0439 \u0441\u0442\u0432\u043E\u043B."
+  englishItemDescription: A 12-gauge combat shotgun. Still in good condition. A reliable
+    barrel.
+  indonesianItemDescription: Senapan tempur ukuran 12. Masih dalam kondisi baik.
+    Tong yang andal.
+  itemType: 0
+  stack: 0
+  number: 1
+  cost: 1000
+  weight: 10
+  itemTypeSprite: {fileID: 21300000, guid: ec1844939f9e5c6448f49e26fe2946d0, type: 3}
+  itemSprite: {fileID: 21300000, guid: 36fe08efc565b49498be21186f7728f7, type: 3}
+  sell: 0
+  equipped: 0
+  needStrength: 5
+  weaponType: 5
+  damageType: 1
+  minDamage: 18
+  maxDamage: 25
+  distance: 20
+  attackTime: 1.75
+  ammoName: "\u0414\u0440\u043E\u0431\u044C"
+  effect: {fileID: 8740738326421082257, guid: 1d08fc69b1f05684cb8443d9fddc3288, type: 3}
+  projectile: {fileID: -6169321323404626271, guid: 3b1cf1a56bf3d6145af55a6ad36d38cf, type: 3}

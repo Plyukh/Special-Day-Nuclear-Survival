@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CharecterCreator.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Bunker.unity
+    guid: 1407c4454fcade944bfe2de87076427d
+  - enabled: 1
+    path: Assets/Scenes/PrivateHouse.unity
+    guid: 05a561f1666a677429edf3048e9dce09
+  - enabled: 1
+    path: Assets/Scenes/LifelessBunker.unity
+    guid: a9c1e356b92a5a347bb07ffb0feb5720
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: b786468dcd4d7a04cb62908fc3ea3f6b
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: c17e4d660dc73884ba6a9ad8b2af80d1
+  - enabled: 1
+    path: Assets/Scenes/Motel.unity
+    guid: 950ae188c15da3b4092e3ee76b07a042
+  - enabled: 1
+    path: Assets/Scenes/Dump.unity
+    guid: 1e755ea46567abc429737b40db1f5a4b
+  - enabled: 1
+    path: Assets/Scenes/Factory.unity
+    guid: 3fea56e6529ea924cb7e36dfdf54d806
+  - enabled: 1
+    path: Assets/Scenes/Mine.unity
+    guid: 12e42f3f67e4d924bb4e7eac963434ba
+  - enabled: 1
+    path: Assets/Scenes/Ship.unity
+    guid: b16862b80678b3a47b4cb2ea04b681ce
+  - enabled: 1
+    path: Assets/Scenes/Lighthouse.unity
+    guid: 301c1f14d0848234982382a2ee544a22
+  - enabled: 1
+    path: Assets/Scenes/Church.unity
+    guid: 12c6d09b1f13fb546847544b6f8fcdd0
+  - enabled: 1
+    path: Assets/Scenes/ChurchShelter.unity
+    guid: 9be2f53a45244934fa880b7b81b329f6
+  - enabled: 1
+    path: Assets/Scenes/Park.unity
+    guid: 1c49f4db806891943a1cda5b75d8da3e
+  - enabled: 1
+    path: Assets/Scenes/ScienceCenter.unity
+    guid: a7a6b8517990d2c459e373fe24f1610f
+  - enabled: 1
+    path: Assets/Scenes/Bar.unity
+    guid: c707f970f8714d74bafe9c4b738a7bbf
+  - enabled: 1
+    path: Assets/Scenes/Roadblock.unity
+    guid: bba99370336db36488557e061e18d520
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 1.unity
+    guid: a1ee79bedfb8f374e90aa9dab662f665
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 2.unity
+    guid: 03efca5f16db08c4a8980291134d2e4c
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 3.unity
+    guid: 52c41bbe9105ed545b5fba139bc56f3f
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 4.unity
+    guid: 2964e26a0e8b0f3449908c4e953b1cb1
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 5.unity
+    guid: ffd5a3810fef3464081576c02d8d37c6
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 6.unity
+    guid: 8a97bdc74db1b954d82d7381998310b1
+  - enabled: 1
+    path: Assets/Scenes/Random Encounter 7.unity
+    guid: 71e89c40618c01145a6f9859e4f19052
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
