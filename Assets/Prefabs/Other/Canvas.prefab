@@ -11495,7 +11495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5649127605910153542}
   - component: {fileID: 5649127605910153544}
-  - component: {fileID: 5649127605910153545}
+  - component: {fileID: 7775679509765656817}
   m_Layer: 5
   m_Name: Inventory UI
   m_TagString: Untagged
@@ -11535,7 +11535,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5649127605910153541}
   m_CullTransparentMesh: 1
---- !u!114 &5649127605910153545
+--- !u!114 &7775679509765656817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11544,11 +11544,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5649127605910153541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11565,11 +11565,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &5649127605915650369
 GameObject:
   m_ObjectHideFlags: 0
@@ -22078,7 +22073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5649127606368767565}
   - component: {fileID: 5649127606368767568}
-  - component: {fileID: 5649127606368767569}
+  - component: {fileID: 8780436380456868027}
   m_Layer: 5
   m_Name: Blur
   m_TagString: Untagged
@@ -22117,7 +22112,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5649127606368767564}
   m_CullTransparentMesh: 1
---- !u!114 &5649127606368767569
+--- !u!114 &8780436380456868027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22126,11 +22121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5649127606368767564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22147,11 +22142,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &5649127606370280064
 GameObject:
   m_ObjectHideFlags: 0
@@ -65248,7 +65238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193653040980965156}
   - component: {fileID: 9193653040980965162}
-  - component: {fileID: 9193653040980965163}
+  - component: {fileID: 7313864058130018903}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -65289,7 +65279,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9193653040980965157}
   m_CullTransparentMesh: 1
---- !u!114 &9193653040980965163
+--- !u!114 &7313864058130018903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65298,11 +65288,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9193653040980965157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -65319,11 +65309,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &9193653040983024050
 GameObject:
   m_ObjectHideFlags: 0
@@ -74974,8 +74959,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9193653041283041814}
-  - component: {fileID: 9193653041283041812}
-  - component: {fileID: 9193653041283041813}
+  - component: {fileID: 6027164109753887501}
+  - component: {fileID: 4144033539432564053}
   m_Layer: 5
   m_Name: Blur
   m_TagString: Untagged
@@ -75011,7 +74996,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &9193653041283041812
+--- !u!222 &6027164109753887501
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75019,7 +75004,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9193653041283041815}
   m_CullTransparentMesh: 1
---- !u!114 &9193653041283041813
+--- !u!114 &4144033539432564053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75028,11 +75013,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9193653041283041815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75049,11 +75034,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &9193653041286596779
 GameObject:
   m_ObjectHideFlags: 0
@@ -103000,7 +102980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193653042240911776}
   - component: {fileID: 9193653042240911782}
-  - component: {fileID: 9193653042240911783}
+  - component: {fileID: 7648364045259056876}
   m_Layer: 5
   m_Name: Blur
   m_TagString: Untagged
@@ -103039,7 +103019,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9193653042240911777}
   m_CullTransparentMesh: 1
---- !u!114 &9193653042240911783
+--- !u!114 &7648364045259056876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103048,11 +103028,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9193653042240911777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -103069,11 +103049,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &9193653042241125102
 GameObject:
   m_ObjectHideFlags: 0
@@ -108745,7 +108720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193653042431438119}
   - component: {fileID: 9193653042431438117}
-  - component: {fileID: 9193653042431438118}
+  - component: {fileID: 4193263785886721594}
   m_Layer: 5
   m_Name: Blur
   m_TagString: Untagged
@@ -108785,7 +108760,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9193653042431438112}
   m_CullTransparentMesh: 1
---- !u!114 &9193653042431438118
+--- !u!114 &4193263785886721594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108794,11 +108769,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9193653042431438112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -108815,11 +108790,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!1 &9193653042432546463
 GameObject:
   m_ObjectHideFlags: 0
