@@ -1,5 +1,6 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="LeTai.TranslucentImage.UniversalRP.csproj" />
   <Project Path="LeTai.TranslucentImage.Demo.csproj" />
   <Project Path="Google.Android.AppBundle.Editor.csproj" />
   <Project Path="LeTai.TranslucentImage.Editor.csproj" />

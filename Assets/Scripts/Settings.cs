@@ -1,9 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    [SerializeField] private UniversalRenderPipelineAsset urpLowOverride;
+    [SerializeField] private UniversalRenderPipelineAsset urpMediumOverride;
+    [SerializeField] private UniversalRenderPipelineAsset urpHighOverride;
     public bool shadows;
     public Text shadowsText;
     public Button shadowsButton;
@@ -23,7 +28,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private Text FPSText;
 
     private int lastFrame;
-    private float[] frameDeltaTimeArray;
+    private float[] frameDeltaTimeArray = new float[50];
 
     public AudioSource music;
     public float musicValue;
@@ -63,16 +68,19 @@ public class Settings : MonoBehaviour
     private void Update()
     {
         AudioSource[] audioSources = FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        foreach (var audioSource in audioSources)
+        if (music != null)
         {
-            if (audioSource.name != music.name)
+            foreach (var audioSource in audioSources)
             {
-                audioSource.volume = soundsValue / 10;
+                if (audioSource.name != music.name)
+                {
+                    audioSource.volume = soundsValue / 10;
+                }
             }
         }
 
 
-        if (fps)
+        if (fps && FPSText != null)
         {
             frameDeltaTimeArray[lastFrame] = Time.deltaTime;
             lastFrame = (lastFrame + 1) % frameDeltaTimeArray.Length;
@@ -87,12 +95,16 @@ public class Settings : MonoBehaviour
 
     private float CalculateFPS()
     {
+        if (frameDeltaTimeArray == null || frameDeltaTimeArray.Length == 0)
+            return 0f;
+
         float total = 0f;
         foreach (float deltaTime in frameDeltaTimeArray)
         {
             total += deltaTime;
         }
-        return frameDeltaTimeArray.Length / total;
+
+        return total > 0f ? frameDeltaTimeArray.Length / total : 0f;
     }
 
     public void Quality(bool first = false)
@@ -102,11 +114,13 @@ public class Settings : MonoBehaviour
             qualityLevel += 1;
         }
 
-        if(qualityLevel > 5)
+        if (qualityLevel > 2)
         {
             qualityLevel = 0;
         }
-        QualitySettings.SetQualityLevel(qualityLevel);
+
+        qualityLevel = Mathf.Clamp(qualityLevel, 0, 2);
+        ApplyUrpGraphicsPreset(qualityLevel);
 
         if (qualityLevel == 0)
         {
@@ -114,21 +128,9 @@ public class Settings : MonoBehaviour
         }
         else if (qualityLevel == 1)
         {
-            qualityText.color = Color.red;
-        }
-        else if (qualityLevel == 2)
-        {
-            qualityText.color = new Color32(255, 165, 0,255);
-        }
-        else if (qualityLevel == 3)
-        {
             qualityText.color = new Color32(255, 165, 0, 255);
         }
-        else if (qualityLevel == 4)
-        {
-            qualityText.color = Color.green;
-        }
-        else if (qualityLevel == 5)
+        else
         {
             qualityText.color = Color.green;
         }
@@ -140,6 +142,41 @@ public class Settings : MonoBehaviour
         qualityButton.onClick.AddListener(() => Quality());
 
         saveScript.SaveSettings();
+    }
+
+    private UniversalRenderPipelineAsset ResolveUrpAsset(int tier)
+    {
+        return tier switch
+        {
+            0 => urpLowOverride != null
+                ? urpLowOverride
+                : Resources.Load<UniversalRenderPipelineAsset>("RenderPipeline/URP_Low"),
+            1 => urpMediumOverride != null
+                ? urpMediumOverride
+                : Resources.Load<UniversalRenderPipelineAsset>("RenderPipeline/URP_Medium"),
+            _ => urpHighOverride != null
+                ? urpHighOverride
+                : Resources.Load<UniversalRenderPipelineAsset>("RenderPipeline/URP_High"),
+        };
+    }
+
+    private static void ApplyTextureMipmapLimitForTier(int tier)
+    {
+        QualitySettings.globalTextureMipmapLimit = tier switch
+        {
+            0 => 2,
+            1 => 1,
+            _ => 0,
+        };
+    }
+
+    private void ApplyUrpGraphicsPreset(int tier)
+    {
+        UniversalRenderPipelineAsset asset = ResolveUrpAsset(tier);
+        if (asset != null)
+            GraphicsSettings.defaultRenderPipeline = asset;
+
+        ApplyTextureMipmapLimitForTier(tier);
     }
 
     public void ShadowsOn()
@@ -306,7 +343,7 @@ public class Settings : MonoBehaviour
 
         if (languageIndex == 0)
         {
-            languageText.text = "Ðóññêèé";
+            languageText.text = "˜˜˜˜˜˜˜";
         }
         else if (languageIndex == 1)
         {
@@ -332,72 +369,48 @@ public class Settings : MonoBehaviour
         {
             if (qualityLevel == 0)
             {
-                qualityText.text = "Î÷. Íèçêîå";
+                qualityText.text = "˜˜˜˜˜˜";
             }
             else if (qualityLevel == 1)
             {
-                qualityText.text = "Íèçêîå";
+                qualityText.text = "˜˜˜˜˜˜˜";
             }
-            else if (qualityLevel == 2)
+            else
             {
-                qualityText.text = "Ñðåäíåå";
-            }
-            else if (qualityLevel == 3)
-            {
-                qualityText.text = "Âûñîêîå";
-            }
-            else if (qualityLevel == 4)
-            {
-                qualityText.text = "Î÷. Âûñîêîå";
-            }
-            else if (qualityLevel == 5)
-            {
-                qualityText.text = "Óëüòðà";
+                qualityText.text = "˜˜˜˜˜˜˜";
             }
 
             if(fps == true)
             {
-                fpsText.text = "Âêë";
+                fpsText.text = "˜˜˜";
             }
             else
             {
-                fpsText.text = "Âûêë";
+                fpsText.text = "˜˜˜˜";
             }
 
             if(shadows == true)
             {
-                shadowsText.text = "Âêë";
+                shadowsText.text = "˜˜˜";
             }
             else
             {
-                shadowsText.text = "Âûêë";
+                shadowsText.text = "˜˜˜˜";
             }
         }
         else if(language == Language.English)
         {
             if (qualityLevel == 0)
             {
-                qualityText.text = "Very Low";
+                qualityText.text = "Low";
             }
             else if (qualityLevel == 1)
             {
-                qualityText.text = "Low";
-            }
-            else if (qualityLevel == 2)
-            {
                 qualityText.text = "Medium";
             }
-            else if (qualityLevel == 3)
+            else
             {
                 qualityText.text = "High";
-            }
-            else if (qualityLevel == 4)
-            {
-                qualityText.text = "Very High";
-            }
-            else if (qualityLevel == 5)
-            {
-                qualityText.text = "Ultra";
             }
 
             if (fps == true)
@@ -422,27 +435,15 @@ public class Settings : MonoBehaviour
         {
             if (qualityLevel == 0)
             {
-                qualityText.text = "Sangat Rendah";
+                qualityText.text = "Rendah";
             }
             else if (qualityLevel == 1)
             {
-                qualityText.text = "Rendah";
-            }
-            else if (qualityLevel == 2)
-            {
                 qualityText.text = "Sedang";
             }
-            else if (qualityLevel == 3)
+            else
             {
                 qualityText.text = "Tinggi";
-            }
-            else if (qualityLevel == 4)
-            {
-                qualityText.text = "Sangat Tinggi";
-            }
-            else if (qualityLevel == 5)
-            {
-                qualityText.text = "Ultra";
             }
 
             if (fps == true)

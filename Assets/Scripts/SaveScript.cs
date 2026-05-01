@@ -6,6 +6,8 @@ using System.Collections;
 
 public class SaveScript : MonoBehaviour
 {
+    private const string QualityMigratedToUrp3TiersKey = "Settings_QualityMigratedToUrp3Tiers";
+
     [SerializeField] private Character character;
     [SerializeField] private int[] skillsLvlPoints;
     [SerializeField] private bool[] perks;
@@ -145,8 +147,8 @@ public class SaveScript : MonoBehaviour
                     SaveLanguage(1);
                 }
 
-                PlayerPrefs.SetInt("StartLanguage", 1); // Сохраняем состояние языка
-                PlayerPrefs.Save(); // Фиксируем изменения
+                PlayerPrefs.SetInt("StartLanguage", 1); //   
+                PlayerPrefs.Save(); //  
             }
         }
         else
@@ -181,26 +183,26 @@ public class SaveScript : MonoBehaviour
 
     public void SaveCharacter()
     {
-        // Сохранение имени персонажа
+        //   
         PlayerPrefs.SetString("CharacterName", character.characterName);
 
-        // Сохранение пола персонажа
+        //   
         PlayerPrefs.SetInt("CharacterMale", character.male ? 1 : 0);
 
-        // Сохранение индексных параметров
+        //   
         PlayerPrefs.SetInt("HairIndex", character.currentHairIndex);
         PlayerPrefs.SetInt("BeardIndex", character.currentBeardIndex);
         PlayerPrefs.SetInt("AccessoriesIndex", character.currentAccessoriesIndex);
         PlayerPrefs.SetInt("SkinIndex", character.currentSkinIndex);
 
-        // Сохранение атрибутов
+        //  
         PlayerPrefs.SetInt("Attributes_Strength", character.Attributes.Strength);
         PlayerPrefs.SetInt("Attributes_Agility", character.Attributes.Agility);
         PlayerPrefs.SetInt("Attributes_Intelligence", character.Attributes.Intelligence);
         PlayerPrefs.SetInt("Attributes_Charisma", character.Attributes.Charisma);
         PlayerPrefs.SetInt("Attributes_Points", character.Attributes.points);
 
-        PlayerPrefs.Save(); // Фиксация изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadCharacter()
@@ -211,19 +213,19 @@ public class SaveScript : MonoBehaviour
 
     private IEnumerator LoadCharacterCoroutine()
     {
-        // Загрузка имени персонажа
+        //   
         if (PlayerPrefs.HasKey("CharacterName"))
         {
             character.characterName = PlayerPrefs.GetString("CharacterName");
         }
 
-        // Загрузка пола персонажа
+        //   
         if (PlayerPrefs.HasKey("CharacterMale"))
         {
             character.male = PlayerPrefs.GetInt("CharacterMale") == 1;
         }
 
-        // Загрузка индексных параметров
+        //   
         if (PlayerPrefs.HasKey("HairIndex"))
         {
             character.currentHairIndex = PlayerPrefs.GetInt("HairIndex");
@@ -241,7 +243,7 @@ public class SaveScript : MonoBehaviour
             character.currentSkinIndex = PlayerPrefs.GetInt("SkinIndex");
         }
 
-        // Загрузка атрибутов
+        //  
         if (PlayerPrefs.HasKey("Attributes_Strength"))
         {
             character.Attributes.Strength = PlayerPrefs.GetInt("Attributes_Strength");
@@ -251,7 +253,7 @@ public class SaveScript : MonoBehaviour
             character.Attributes.points = PlayerPrefs.GetInt("Attributes_Points");
         }
 
-        yield return null; // Асинхронная пауза
+        yield return null; //  
 
         activeCoroutines--;
 
@@ -276,12 +278,12 @@ public class SaveScript : MonoBehaviour
         PlayerPrefs.SetInt("LVL", experienceSystem.GetCurrentLVL);
         PlayerPrefs.SetFloat("CurrentRadiation", character.GetComponent<Radiation>().currentRad);
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadStats()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadStatsCoroutine());
     }
@@ -300,13 +302,13 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        // Загрузка текущего здоровья персонажа
+        //    
         if (PlayerPrefs.HasKey("CurrentHP"))
         {
             character.GetComponent<HealthSystem>().health = PlayerPrefs.GetFloat("CurrentHP");
         }
 
-        // Загрузка опыта и уровня
+        //    
         if (PlayerPrefs.HasKey("XP") && PlayerPrefs.HasKey("LVL"))
         {
             float xp = PlayerPrefs.GetFloat("XP");
@@ -314,24 +316,24 @@ public class SaveScript : MonoBehaviour
             experienceSystem.SetXP_LVL(xp, lvl);
         }
 
-        // Загрузка текущей радиации
+        //   
         if (PlayerPrefs.HasKey("CurrentRadiation"))
         {
             character.GetComponent<Radiation>().currentRad = PlayerPrefs.GetFloat("CurrentRadiation");
         }
 
-        // Запуск системы радиации после загрузки
+        //     
         character.GetComponent<Radiation>().StartRad();
 
-        yield return null; // Асинхронная пауза
+        yield return null; //  
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
@@ -339,14 +341,14 @@ public class SaveScript : MonoBehaviour
     {
         PlayerPrefs.SetInt("PerksPoints", character.PerkSystem.points);
 
-        // Сериализация массива Perk[]
+        //   Perk[]
 
         for (int i = 0; i < perks.Length; i++)
         {
             perks[i] = character.PerkSystem.perks[i].Active;
         }
 
-        // Сериализация массива булевых значений
+        //    
         string perksJson = JsonUtility.ToJson(new SerializationWrapper<bool>(perks));
         PlayerPrefs.SetString("Perks", perksJson);
 
@@ -372,12 +374,12 @@ public class SaveScript : MonoBehaviour
             string perksJson = PlayerPrefs.GetString("Perks");
             SerializationWrapper<bool> wrapper = JsonUtility.FromJson<SerializationWrapper<bool>>(perksJson);
 
-            // Загрузка сохранённых Perk[]
+            //   Perk[]
             bool[] savedPerks = wrapper.data;
 
             for (int i = 0; i < savedPerks.Length; i++)
             {
-                if (i < character.PerkSystem.perks.Length) // Защита от выхода за границы массива
+                if (i < character.PerkSystem.perks.Length) //      
                 {
                     character.PerkSystem.perks[i].Active = savedPerks[i];
                 }
@@ -431,7 +433,7 @@ public class SaveScript : MonoBehaviour
         PlayerPrefs.SetString("CarItemsID", carItemsIDJson);
         PlayerPrefs.SetString("CarItemsNumber", carItemsNumberJson);
 
-        // Сериализация массива предметов в JSON
+        //     JSON
         string itemsIDJson = JsonUtility.ToJson(new SerializationWrapper<int>(playerItemsID));
         string itemsNumberJson = JsonUtility.ToJson(new SerializationWrapper<float>(playerItemsNumber));
         string itemsEquippedJson = JsonUtility.ToJson(new SerializationWrapper<bool>(playerItemsEquipped));
@@ -440,24 +442,24 @@ public class SaveScript : MonoBehaviour
         PlayerPrefs.SetString("PlayerItemsNumber", itemsNumberJson);
         PlayerPrefs.SetString("PlayerItemsEquipped", itemsEquippedJson);
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadInventory()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadInventoryCoroutine());
     }
     private IEnumerator LoadInventoryCoroutine()
     {
-        // Загрузка денег
+        //  
         if (PlayerPrefs.HasKey("Money"))
         {
             character.Inventory.money = PlayerPrefs.GetInt("Money");
         }
 
-        // Загрузка предметов в инвентарь
+        //    
         if (PlayerPrefs.HasKey("PlayerItemsID"))
         {
             string itemsIDJson = PlayerPrefs.GetString("PlayerItemsID");
@@ -510,15 +512,15 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        yield return null; // Асинхронная пауза
+        yield return null; //  
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
@@ -535,7 +537,7 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        // Сериализация массива квестов в JSON
+        //     JSON
         string questActiveJson = JsonUtility.ToJson(new SerializationWrapper<bool>(questActive));
         string questCompleteJson = JsonUtility.ToJson(new SerializationWrapper<bool>(questComplete));
         string questPartActiveJson = JsonUtility.ToJson(new SerializationWrapper<bool>(questPartActive));
@@ -545,12 +547,12 @@ public class SaveScript : MonoBehaviour
         PlayerPrefs.SetString("QuestsPartActive", questPartActiveJson);
         PlayerPrefs.SetString("QuestsPartComplete", questPartCompleteJson);
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadQuests()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadQuestsCoroutine());
     }
@@ -559,7 +561,7 @@ public class SaveScript : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("QuestsActive"))
         {
-            // Десериализация JSON обратно в массив квестов
+            //  JSON    
             string questsActiveJson = PlayerPrefs.GetString("QuestsActive");
             string questsCompleteJson = PlayerPrefs.GetString("QuestsComplete");
             string questsPartActiveJson = PlayerPrefs.GetString("QuestsPartActive");
@@ -577,11 +579,11 @@ public class SaveScript : MonoBehaviour
 
             for (int i = 0; i < questSystem.quests.Length; i++)
             {
-                // Загрузка основной информации о квесте
+                //     
                 questSystem.quests[i].Active = savedQuestsActive[i];
                 questSystem.quests[i].Complete = savedQuestsComplete[i];
 
-                // Загрузка деталей для каждого квеста
+                //     
                 for (int j = 0; j < questSystem.quests[i].QuestParts.Length; j++)
                 {
                     questSystem.quests[i].QuestParts[j].Active = savedQuestsPartActive[j + i * 4];
@@ -589,22 +591,22 @@ public class SaveScript : MonoBehaviour
                 }
             }
 
-            yield return null; // Асинхронная пауза после обработки данных
+            yield return null; //     
         }
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
     public void SaveMap()
     {
-        // Сохранение состояния "тумана войны"
+        //   " "
 
         for (int i = 0; i < fog.Length; i++)
         {
@@ -614,11 +616,11 @@ public class SaveScript : MonoBehaviour
         string fogJson = JsonUtility.ToJson(new SerializationWrapper<bool>(fog));
         PlayerPrefs.SetString("Fog", fogJson);
 
-        // Сохранение состояния случайных встреч
+        //    
         string encountersJson = JsonUtility.ToJson(new SerializationWrapper<bool>(map.attendedRandomEncounter));
         PlayerPrefs.SetString("RandomEncounters", encountersJson);
 
-        // Сохранение позиции игрока на карте
+        //     
         if (map.lastCell != null)
         {
             for (int i = 0; i < map.Fog.Length; i++)
@@ -631,18 +633,18 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
     public void LoadMap()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadMapCoroutine());
     }
 
     private IEnumerator LoadMapCoroutine()
     {
-        // Загрузка состояния "тумана войны"
+        //   " "
         if (PlayerPrefs.HasKey("Fog"))
         {
             string fogJson = PlayerPrefs.GetString("Fog");
@@ -653,10 +655,10 @@ public class SaveScript : MonoBehaviour
             {
                 map.Fog[i].find = savedFog[i];
             }
-            yield return null; // Асинхронная пауза
+            yield return null; //  
         }
 
-        // Загрузка состояния случайных встреч
+        //    
         if (PlayerPrefs.HasKey("RandomEncounters"))
         {
             string encountersJson = PlayerPrefs.GetString("RandomEncounters");
@@ -670,10 +672,10 @@ public class SaveScript : MonoBehaviour
                     map.attendedRandomEncounter[i] = savedEncounters[i];
                 }
             }
-            yield return null; // Асинхронная пауза
+            yield return null; //  
         }
 
-        // Загрузка позиции игрока на карте
+        //     
         if (PlayerPrefs.HasKey("PlayerMapPotionIndex"))
         {
             int playerMapPointIndex = PlayerPrefs.GetInt("PlayerMapPotionIndex");
@@ -681,16 +683,16 @@ public class SaveScript : MonoBehaviour
             {
                 map.PlayerMapPoint.transform.position = map.Fog[playerMapPointIndex].transform.position;
             }
-            yield return null; // Асинхронная пауза
+            yield return null; //  
         }
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
@@ -702,14 +704,14 @@ public class SaveScript : MonoBehaviour
         PlayerPrefs.SetInt("Settings_FPS", settings.fps ? 1 : 0);
         PlayerPrefs.SetFloat("Settings_MusicValue", settings.musicValue);
         PlayerPrefs.SetFloat("Settings_SoundsValue", settings.soundsValue);
-        PlayerPrefs.SetInt("Language", settings.languageIndex); // Сохранение языка как индекс
+        PlayerPrefs.SetInt("Language", settings.languageIndex); //    
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadSettings()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadSettingsCoroutine());
     }
@@ -718,8 +720,18 @@ public class SaveScript : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Settings_QualityLevel"))
         {
-            settings.qualityLevel = PlayerPrefs.GetInt("Settings_QualityLevel");
-            yield return null; // Асинхронная пауза
+            int raw = PlayerPrefs.GetInt("Settings_QualityLevel");
+            if (!PlayerPrefs.HasKey(QualityMigratedToUrp3TiersKey))
+            {
+                settings.qualityLevel = Mathf.Clamp(raw / 2, 0, 2);
+                PlayerPrefs.SetInt("Settings_QualityLevel", settings.qualityLevel);
+                PlayerPrefs.SetInt(QualityMigratedToUrp3TiersKey, 1);
+            }
+            else
+            {
+                settings.qualityLevel = Mathf.Clamp(raw, 0, 2);
+            }
+            yield return null; //  
         }
 
         if (PlayerPrefs.HasKey("Settings_Shadows"))
@@ -758,36 +770,36 @@ public class SaveScript : MonoBehaviour
             yield return null;
         }
 
-        settings.UpdateSettings(); // Применение настроек после загрузки
+        settings.UpdateSettings(); //    
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
     public void SaveLastSceneName()
     {
         PlayerPrefs.SetString("SceneName", sceneManager.sceneName);
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void SaveTraining()
     {
         if (trainingSystem != null)
         {
-            PlayerPrefs.SetInt("Training", trainingSystem.complete ? 1 : 0); // Сохранение как целое число (1 или 0)
-            PlayerPrefs.Save(); // Фиксация изменений
+            PlayerPrefs.SetInt("Training", trainingSystem.complete ? 1 : 0); //     (1  0)
+            PlayerPrefs.Save(); //  
         }
     }
 
     public void LoadTraining()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadTrainingCoroutine());
     }
@@ -798,19 +810,19 @@ public class SaveScript : MonoBehaviour
         {
             if (PlayerPrefs.HasKey("Training"))
             {
-                // Асинхронная загрузка состояния тренировочной системы
+                //     
                 trainingSystem.complete = PlayerPrefs.GetInt("Training") == 1;
-                yield return null; // Асинхронная пауза
+                yield return null; //  
             }
         }
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
@@ -872,43 +884,43 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        // Сохранение позиции игрока
+        //   
         PlayerPrefs.SetFloat(sceneManager.sceneName + "_PlayerPositionX", character.transform.position.x);
         PlayerPrefs.SetFloat(sceneManager.sceneName + "_PlayerPositionY", character.transform.position.y);
         PlayerPrefs.SetFloat(sceneManager.sceneName + "_PlayerPositionZ", character.transform.position.z);
 
-        // Сохранение текущей комнаты
+        //   
         PlayerPrefs.SetString(sceneManager.sceneName + "_CurrentRoomName", character.characterMovement.CurrentRoom.name);
 
-        // Сохранение массивов данных find
+        //    find
         PlayerPrefs.SetString(sceneManager.sceneName + "_Find", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.find)));
         
-        // Сохранение массивов данных currentNodes
+        //    currentNodes
         PlayerPrefs.SetString(sceneManager.sceneName + "_CurrentNodes", JsonUtility.ToJson(new SerializationWrapper<int>(sceneManager.currentNodes)));
 
-        // Сохранение здоровья персонажей
+        //   
         PlayerPrefs.SetString(sceneManager.sceneName + "_Health", JsonUtility.ToJson(new SerializationWrapper<float>(sceneManager.health)));
 
-        // Сохранение остальных данных о персонажах
+        //     
         PlayerPrefs.SetString(sceneManager.sceneName + "_DeathHair", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.deathHair)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_Aggressive", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.aggressive)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_CanDialogue", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.canDialogue)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_HasLeft", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.hasLeft)));
 
-        // Сохранение состояния объектов (powerBoxes, repairObjects и т.д.)
+        //    (powerBoxes, repairObjects  ..)
         PlayerPrefs.SetString(sceneManager.sceneName + "_Works", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.works)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_OpenDoors", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.openDoors)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_LastRepairObject", JsonUtility.ToJson(new SerializationWrapper<string>(sceneManager.lastRepairObject)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_Skills", JsonUtility.ToJson(new SerializationWrapper<int>(sceneManager.skills)));
 
-        // Сохранение инвентаря
+        //  
         PlayerPrefs.SetString(sceneManager.sceneName + "_Money", JsonUtility.ToJson(new SerializationWrapper<int>(sceneManager.money)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_ItemsID", JsonUtility.ToJson(new SerializationWrapper<int>(sceneManager.itemsID)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_ItemsNumber", JsonUtility.ToJson(new SerializationWrapper<float>(sceneManager.itemsNumber)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_ItemsEquipped", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.itemsEquipped)));
         PlayerPrefs.SetString(sceneManager.sceneName + "_ItemsSell", JsonUtility.ToJson(new SerializationWrapper<bool>(sceneManager.itemsSell)));
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
     public void LoadScene()
     {
@@ -920,7 +932,7 @@ public class SaveScript : MonoBehaviour
         }
         if (PlayerPrefs.HasKey(sceneManager.sceneName + "_CurrentRoomName"))
         {
-            // Загрузка текущей комнаты
+            //   
             string currentRoomName = PlayerPrefs.GetString(sceneManager.sceneName + "_CurrentRoomName");
             foreach (var room in sceneManager.rooms)
             {
@@ -1121,14 +1133,14 @@ public class SaveScript : MonoBehaviour
     {
         if (LanguageIndex >= 0)
         {
-            PlayerPrefs.SetInt("Language", LanguageIndex); // Сохраняем индекс языка
+            PlayerPrefs.SetInt("Language", LanguageIndex); //   
         }
         else
         {
-            PlayerPrefs.SetInt("Language", (int)languageManager.currentLanguage); // Сохраняем текущий язык как индекс
+            PlayerPrefs.SetInt("Language", (int)languageManager.currentLanguage); //     
         }
 
-        PlayerPrefs.Save(); // Сохранение изменений
+        PlayerPrefs.Save(); //  
     }
 
     public void LoadLanguage()
@@ -1136,13 +1148,13 @@ public class SaveScript : MonoBehaviour
         if (PlayerPrefs.HasKey("Language"))
         {
             int savedLanguageIndex = PlayerPrefs.GetInt("Language");
-            languageManager.SetLanguage((Language)savedLanguageIndex); // Восстановление языка
+            languageManager.SetLanguage((Language)savedLanguageIndex); //  
         }
     }
 
     public void LoadLanguageAsync()
     {
-        // Увеличиваем счётчик активных корутин
+        //    
         activeCoroutines++;
         StartCoroutine(LoadLanguageCoroutine());
     }
@@ -1151,20 +1163,20 @@ public class SaveScript : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Language"))
         {
-            // Асинхронная загрузка языка
+            //   
             int savedLanguageIndex = PlayerPrefs.GetInt("Language");
             languageManager.SetLanguage((Language)savedLanguageIndex);
 
-            yield return null; // Асинхронная пауза
+            yield return null; //  
         }
 
-        // Уменьшаем счётчик активных корутин
+        //    
         activeCoroutines--;
 
-        // Проверяем, завершены ли все корутины
+        // ,    
         if (activeCoroutines == 0 && loadingWindowAnimator != null)
         {
-            loadingWindowAnimator.SetBool("Loading", false); // Отключаем анимацию загрузки
+            loadingWindowAnimator.SetBool("Loading", false); //   
         }
     }
 
@@ -1173,7 +1185,7 @@ public class SaveScript : MonoBehaviour
         saveWindowAnimator.gameObject.SetActive(false);
         saveWindowAnimator.gameObject.SetActive(true);
 
-        // Сохранение всех данных с использованием PlayerPrefs
+        //      PlayerPrefs
         SaveCharacter();
         SaveStats();
         SavePerks();
@@ -1184,10 +1196,10 @@ public class SaveScript : MonoBehaviour
         SaveScene();
         SaveTraining();
 
-        // Сохранение сброса состояния сцены
+        //    
         PlayerPrefs.SetInt(sceneManager.sceneName + "R", sceneManager.reset ? 1 : 0);
 
-        PlayerPrefs.Save(); // Фиксация всех изменений
+        PlayerPrefs.Save(); //   
     }
 
     public void SaveToStart()
@@ -1278,14 +1290,14 @@ public class SaveScript : MonoBehaviour
             SaveTraining();
 
             sceneManager.reset = false;
-            PlayerPrefs.SetInt(sceneManager.sceneName + "R", 0); // Сохранение сброса состояния
-            PlayerPrefs.Save(); // Фиксация изменений
+            PlayerPrefs.SetInt(sceneManager.sceneName + "R", 0); //   
+            PlayerPrefs.Save(); //  
         }
     }
 
     public void SaveToSettings()
     {
-        // Сохраняем основные игровые данные
+        //    
         SaveCharacter();
         SaveStats();
         SavePerks();
@@ -1296,10 +1308,10 @@ public class SaveScript : MonoBehaviour
         SaveScene();
         SaveTraining();
 
-        // Сохраняем состояние сброса
+        //   
         PlayerPrefs.SetInt(sceneManager.sceneName + "R", sceneManager.reset ? 1 : 0);
 
-        PlayerPrefs.Save(); // Фиксация всех изменений
+        PlayerPrefs.Save(); //   
     }
 
 
@@ -1318,7 +1330,7 @@ public class SaveScript : MonoBehaviour
 
     public void ResetInventory()
     {
-        // Сбрасываем деньги в инвентаре
+        //    
         character.Inventory.money = 0;
 
         for (int i = 0; i < character.Inventory.items.Length; i++)
@@ -1330,24 +1342,24 @@ public class SaveScript : MonoBehaviour
             carInventory.items[i] = null;
         }
 
-        // Фиксация изменений
+        //  
         SaveInventory();
     }
 
     public void ResetStats()
     {
-        // Сбрасываем основные параметры
-        PlayerPrefs.SetFloat("CurrentHP", 1000); // Устанавливаем здоровье на максимум
-        experienceSystem.SetXP_LVL(0, 1); // Сбрасываем опыт и уровень
-        PlayerPrefs.SetFloat("XP", experienceSystem.GetCurrentXP); // Сохраняем сброшенный опыт
-        PlayerPrefs.SetInt("LVL", experienceSystem.GetCurrentLVL); // Сохраняем сброшенный уровень
-        PlayerPrefs.SetFloat("CurrentRadiation", 0); // Сбрасываем радиацию
+        //   
+        PlayerPrefs.SetFloat("CurrentHP", 1000); //    
+        experienceSystem.SetXP_LVL(0, 1); //    
+        PlayerPrefs.SetFloat("XP", experienceSystem.GetCurrentXP); //   
+        PlayerPrefs.SetInt("LVL", experienceSystem.GetCurrentLVL); //   
+        PlayerPrefs.SetFloat("CurrentRadiation", 0); //  
 
-        // Сбрасываем очки перков и их состояние
+        //      
         character.PerkSystem.points = 0;
         for (int i = 0; i < character.PerkSystem.perks.Length; i++)
         {
-            character.PerkSystem.perks[i].Active = false; // Деактивируем все перки
+            character.PerkSystem.perks[i].Active = false; //   
         }
         for (int i = 0; i < character.CharacterSkills.Length; i++)
         {
@@ -1358,7 +1370,7 @@ public class SaveScript : MonoBehaviour
 
         PlayerPrefs.SetString("SkillsLvlPoints", skillsLvlPointsJson);
 
-        // Сохраняем состояние перков
+        //   
         SavePerks();
     }
 
@@ -1410,10 +1422,10 @@ public class SaveScript : MonoBehaviour
     }
     public void ResetLastSceneName()
     {
-        // Сбрасываем имя сцены на пустую строку
+        //      
         PlayerPrefs.SetString("SceneName", "");
 
-        // Фиксируем изменения
+        //  
         PlayerPrefs.Save();
     }
 
@@ -1428,7 +1440,7 @@ public class SaveScript : MonoBehaviour
 
     public void RestartGame()
     {
-        // Сброс всех данных через соответствующие методы
+        //      
         ResetInventory();
         ResetStats();
         ResetLastSceneName();
@@ -1440,11 +1452,11 @@ public class SaveScript : MonoBehaviour
         for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
         {
             string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
-            for (int j = 14; j < scenePath.Length; j++) // 14 — предполагаемая длина пути до имени сцены
+            for (int j = 14; j < scenePath.Length; j++) // 14       
             {
                 if (scenePath[j] == '.')
                 {
-                    PlayerPrefs.SetInt(str + "R", 1); // Сохраняем сброс состояния сцены
+                    PlayerPrefs.SetInt(str + "R", 1); //    
                     str = "";
                     break;
                 }
@@ -1452,9 +1464,9 @@ public class SaveScript : MonoBehaviour
             }
         }
 
-        PlayerPrefs.Save(); // Фиксация всех изменений
+        PlayerPrefs.Save(); //   
 
-        // Загрузка начальной сцены
+        //   
         sceneManager.LoadScene("CharecterCreator");
     }
 }
