@@ -179,7 +179,11 @@ public class Settings : MonoBehaviour
     {
         UniversalRenderPipelineAsset asset = ResolveUrpAsset(tier);
         if (asset != null)
+        {
             GraphicsSettings.defaultRenderPipeline = asset;
+            // Иначе URP из Edit > Quality > Render Pipeline перекрывает default (см. QualitySettings.renderPipeline).
+            QualitySettings.renderPipeline = asset;
+        }
 
         ApplyTextureMipmapLimitForTier(tier);
     }
