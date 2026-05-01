@@ -10,6 +10,7 @@ TagManager:
   - Player Point Map
   - Blood
   - Car
+  - Sphere
   layers:
   - Default
   - TransparentFX

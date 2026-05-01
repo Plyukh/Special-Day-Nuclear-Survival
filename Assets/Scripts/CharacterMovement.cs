@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[DefaultExecutionOrder(50)]
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent playerNavMeshAgent;
@@ -62,6 +63,148 @@ public class CharacterMovement : MonoBehaviour
     private float positionTolerance = 0.01f;
     private bool runToFloor;
 
+    int floorLayer = -1;
+    int interactableLayer = -1;
+    int uiLayer = -1;
+    int ignoreRaycastLayer = -1;
+    int invisibleToCameraLayer = -1;
+    int playerLayer = -1;
+    int npcLayer = -1;
+    int navigationRaycastMask = ~0;
+
+    const int RaycastBufferSize = 32;
+    readonly RaycastHit[] raycastBuffer = new RaycastHit[RaycastBufferSize];
+
+    void Awake()
+    {
+        floorLayer = LayerMask.NameToLayer("Floor");
+        interactableLayer = LayerMask.NameToLayer("Interactable");
+        uiLayer = LayerMask.NameToLayer("UI");
+        ignoreRaycastLayer = LayerMask.NameToLayer("Ignore Raycast");
+        invisibleToCameraLayer = LayerMask.NameToLayer("Invisible to the camera");
+        playerLayer = LayerMask.NameToLayer("Player");
+        npcLayer = LayerMask.NameToLayer("NPC");
+
+        navigationRaycastMask = ~(LayerMask.GetMask("UI", "Ignore Raycast"));
+    }
+
+    private void LateUpdate()
+    {
+        if (tag != "Player")
+            return;
+
+        if (!PrimaryPointerInput.GetPrimaryUpThisFrame(out Vector2 tapScreen) || !canMove || playerCamera == null)
+            return;
+
+        if (playerCamera.GetComponent<CameraZoom>().CameraDrag)
+            return;
+
+        Ray ray = playerCamera.ScreenPointToRay(tapScreen);
+        int hitCount = Physics.RaycastNonAlloc(ray, raycastBuffer, 800f, navigationRaycastMask, QueryTriggerInteraction.Collide);
+        if (hitCount <= 0)
+        {
+            if (!Physics.Raycast(ray, out RaycastHit singleHit, 800f, navigationRaycastMask, QueryTriggerInteraction.Collide))
+                return;
+            raycastBuffer[0] = singleHit;
+            hitCount = 1;
+        }
+
+        int best = -1;
+        float bestDist = float.MaxValue;
+        for (int i = 0; i < hitCount; i++)
+        {
+            ref RaycastHit h = ref raycastBuffer[i];
+            if (h.collider == null)
+                continue;
+            int layer = h.collider.gameObject.layer;
+            if (layer == uiLayer || layer == ignoreRaycastLayer)
+                continue;
+
+            GameObject hitGo = h.collider.gameObject;
+            bool hasCubeObject = hitGo.GetComponent<CubeObject>() != null ||
+                                 hitGo.GetComponentInChildren<CubeObject>(true) != null;
+
+            if (layer == floorLayer || layer == interactableLayer || hasCubeObject)
+            {
+                if (h.distance < bestDist)
+                {
+                    bestDist = h.distance;
+                    best = i;
+                }
+            }
+        }
+
+        if (best < 0)
+        {
+            bestDist = float.MaxValue;
+            for (int i = 0; i < hitCount; i++)
+            {
+                ref RaycastHit h = ref raycastBuffer[i];
+                if (h.collider == null)
+                    continue;
+                int layer = h.collider.gameObject.layer;
+                if (layer == uiLayer || layer == ignoreRaycastLayer)
+                    continue;
+                if (invisibleToCameraLayer >= 0 && layer == invisibleToCameraLayer)
+                    continue;
+                if (playerLayer >= 0 && layer == playerLayer)
+                    continue;
+                if (npcLayer >= 0 && layer == npcLayer)
+                    continue;
+                GameObject go = h.collider.gameObject;
+                if (go.CompareTag("Player") || go.CompareTag("Sphere"))
+                    continue;
+
+                if (h.distance < bestDist)
+                {
+                    bestDist = h.distance;
+                    best = i;
+                }
+            }
+        }
+
+        if (best < 0)
+            return;
+
+        RaycastHit raycastHit = raycastBuffer[best];
+        target = raycastHit.collider.gameObject;
+        targetPoint = raycastHit.point;
+        Instantiate(effect, targetPoint, effect.transform.rotation, gameObject.transform.parent);
+        if (target.layer == interactableLayer)
+        {
+            for (int i = 0; i < target.transform.childCount; i++)
+            {
+                if (target.transform.GetChild(i).GetComponent<Interactable>())
+                {
+                    playerNavMeshAgent.stoppingDistance = interatableStoppingDistance;
+                    interactableTarget = target.transform.GetChild(i).GetComponent<Interactable>();
+                    interactableUI.ShowButtons(interactableTarget, character);
+
+                    return;
+                }
+            }
+        }
+        else
+        {
+            CubeObject cube = target.GetComponent<CubeObject>() ?? target.GetComponentInChildren<CubeObject>(true);
+            if (cube != null)
+            {
+                cube.ClickMesh();
+                targetPoint = cube.usePosition.transform.position;
+            }
+            runToFloor = true;
+            interactableTarget = null;
+            playerNavMeshAgent.stoppingDistance = floorStoppingDistance;
+        }
+        if (!target.CompareTag("Player") && !target.CompareTag("Sphere") && interactableTarget == null)
+        {
+            interactableUI.point.SetActive(false);
+
+            playerNavMeshAgent.SetDestination(targetPoint);
+            move = true;
+        }
+    }
+
     private void FixedUpdate()
     {
         if(character.combatSystem.Target() != null && character.stealthSystem.stealth == false)
@@ -73,49 +216,6 @@ public class CharacterMovement : MonoBehaviour
 
         if(tag == "Player")
         {
-            RaycastHit raycastHit;
-            if (Input.GetMouseButtonUp(0) && Input.touchCount == 1 && canMove && playerCamera.GetComponent<CameraZoom>().CameraDrag == false)
-            {
-                Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out raycastHit))
-                {
-                    target = raycastHit.collider.gameObject;
-                    targetPoint = raycastHit.point;
-                    Instantiate(effect,targetPoint, effect.transform.rotation, gameObject.transform.parent);
-                    if (target.layer == LayerMask.NameToLayer("Interactable"))
-                    {
-                        for (int i = 0; i < target.transform.childCount; i++)
-                        {
-                            if (target.transform.GetChild(i).GetComponent<Interactable>())
-                            {
-                                playerNavMeshAgent.stoppingDistance = interatableStoppingDistance;
-                                interactableTarget = target.transform.GetChild(i).GetComponent<Interactable>();
-                                interactableUI.ShowButtons(interactableTarget, character);
-
-                                return;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (target.GetComponent<CubeObject>())
-                        {
-                            target.GetComponent<CubeObject>().ClickMesh();
-                            targetPoint = target.GetComponent<CubeObject>().usePosition.transform.position;
-                        }
-                        runToFloor = true;
-                        interactableTarget = null;
-                        playerNavMeshAgent.stoppingDistance = floorStoppingDistance;
-                    }
-                    if (target.tag != "Player" && target.tag != "Sphere" && interactableTarget == null)
-                    {
-                        interactableUI.point.SetActive(false);
-
-                        playerNavMeshAgent.SetDestination(targetPoint);
-                        move = true;
-                    }
-                }
-            }
             character.animator.SetBool("Stealth", character.stealthSystem.stealth);
         }
         else

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+[DefaultExecutionOrder(-50)]
 public class CameraZoom : MonoBehaviour
 {
     [SerializeField] GameObject player;
@@ -22,6 +23,9 @@ public class CameraZoom : MonoBehaviour
 
     public bool CameraDrag;
     bool mouseDown;
+    bool panExceededThreshold;
+    Vector2 panPointerStartScreen;
+    float CameraDragMinScreenPixels => Mathf.Max(32f, Mathf.Min(Screen.width, Screen.height) * 0.04f);
 
     private bool findPlayer;
     private Vector3 playerPosition;
@@ -96,50 +100,58 @@ public class CameraZoom : MonoBehaviour
 
     void LateUpdate()
     {
-        if (startPosition != endPosition || pointer == true)
-        {
-            CameraDrag = true;
-        }
-        else
-        {
-            CameraDrag = false;
-        }
-
         if (pointer == false)
         {
-            if (Input.touchCount == 1)
+            if (Input.touchCount <= 1)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (PrimaryPointerInput.GetPrimaryDownThisFrame(out Vector2 downScreen))
                 {
-                    touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    touchStart = Camera.main.ScreenToWorldPoint(downScreen);
 
                     startPosition = transform.position;
                     endPosition = transform.position;
                     mouseDown = true;
+                    panExceededThreshold = false;
+                    panPointerStartScreen = downScreen;
                     interactableUI.point.SetActive(false);
                     if(characterMovement == null)
                     {
                         characterMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
                     }
                 }
-                if (Input.GetMouseButtonUp(0))
+                if (PrimaryPointerInput.GetPrimaryUpThisFrame(out _))
                 {
+                    if (mouseDown && !panExceededThreshold)
+                    {
+                        startPosition = endPosition = transform.position;
+                    }
                     mouseDown = false;
+                    panExceededThreshold = false;
                 }
 
                 if (mouseDown)
                 {
-                    if(Camera.main.transform.position.z < maxPosition.x && Camera.main.transform.position.y < maxPosition.y &&
+                    Vector2 currentScreen = PrimaryPointerInput.GetPrimaryScreenPosition();
+
+                    if (!panExceededThreshold)
+                    {
+                        if ((currentScreen - panPointerStartScreen).sqrMagnitude >= CameraDragMinScreenPixels * CameraDragMinScreenPixels)
+                            panExceededThreshold = true;
+                    }
+
+                    if (panExceededThreshold &&
+                        Camera.main.transform.position.z < maxPosition.x && Camera.main.transform.position.y < maxPosition.y &&
                         Camera.main.transform.position.z > minPosition.x && Camera.main.transform.position.y > minPosition.y)
                     {
-                        Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(currentScreen);
                         Camera.main.transform.position += direction;
                         endPosition = transform.position;
                     }
-                    else
+                    else if (panExceededThreshold)
                     {
                         OnPlayerPosition();
                         mouseDown = false;
+                        panExceededThreshold = false;
                     }
                 }
             }
@@ -158,6 +170,15 @@ public class CameraZoom : MonoBehaviour
 
                 zoom(difference * 0.01f);
             }
+        }
+
+        if (startPosition != endPosition || pointer == true)
+        {
+            CameraDrag = true;
+        }
+        else
+        {
+            CameraDrag = false;
         }
 
         zoom(0);
