@@ -343,7 +343,7 @@ public class Settings : MonoBehaviour
 
         if (languageIndex == 0)
         {
-            languageText.text = "˜˜˜˜˜˜˜";
+            languageText.text = "\u0420\u0443\u0441\u0441\u043a\u0438\u0439";
         }
         else if (languageIndex == 1)
         {
@@ -369,33 +369,33 @@ public class Settings : MonoBehaviour
         {
             if (qualityLevel == 0)
             {
-                qualityText.text = "˜˜˜˜˜˜";
+                qualityText.text = "\u041d\u0438\u0437\u043a\u043e\u0435";
             }
             else if (qualityLevel == 1)
             {
-                qualityText.text = "˜˜˜˜˜˜˜";
+                qualityText.text = "\u0421\u0440\u0435\u0434\u043d\u0435\u0435";
             }
             else
             {
-                qualityText.text = "˜˜˜˜˜˜˜";
+                qualityText.text = "\u0412\u044b\u0441\u043e\u043a\u043e\u0435";
             }
 
             if(fps == true)
             {
-                fpsText.text = "˜˜˜";
+                fpsText.text = "\u0412\u043a\u043b";
             }
             else
             {
-                fpsText.text = "˜˜˜˜";
+                fpsText.text = "\u0412\u044b\u043a\u043b";
             }
 
             if(shadows == true)
             {
-                shadowsText.text = "˜˜˜";
+                shadowsText.text = "\u0412\u043a\u043b";
             }
             else
             {
-                shadowsText.text = "˜˜˜˜";
+                shadowsText.text = "\u0412\u044b\u043a\u043b";
             }
         }
         else if(language == Language.English)
