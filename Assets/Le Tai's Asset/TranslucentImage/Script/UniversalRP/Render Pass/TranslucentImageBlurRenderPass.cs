@@ -20,7 +20,7 @@ public class TranslucentImageBlurRenderPass : ScriptableRenderPass
 {
     private const string PROFILER_TAG = "Translucent Image Source";
 
-    readonly RTHandle afterPostProcessTexture;
+    static readonly int AfterPostProcessTextureId = Shader.PropertyToID("_AfterPostProcessTexture");
 
     TISPassData currentPassData;
     Material    previewMaterial;
@@ -38,8 +38,6 @@ public class TranslucentImageBlurRenderPass : ScriptableRenderPass
 
     public TranslucentImageBlurRenderPass()
     {
-        //Fragile!!! Should request Unity for access
-        afterPostProcessTexture.Init("_AfterPostProcessTexture");
     }
 
     ~TranslucentImageBlurRenderPass()
@@ -56,7 +54,7 @@ public class TranslucentImageBlurRenderPass : ScriptableRenderPass
     {
         var cmd = CommandBufferPool.Get(PROFILER_TAG);
         var source = renderingData.cameraData.postProcessEnabled
-                         ? afterPostProcessTexture.Identifier()
+                         ? new RenderTargetIdentifier(AfterPostProcessTextureId)
                          : currentPassData.cameraColorTarget;
 
         currentPassData.blurAlgorithm.Blur(cmd,

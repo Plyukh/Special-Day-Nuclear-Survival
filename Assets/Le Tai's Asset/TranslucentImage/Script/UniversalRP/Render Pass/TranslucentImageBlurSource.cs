@@ -47,7 +47,7 @@ public class TranslucentImageBlurSource : ScriptableRendererFeature
         tis.OnBeforeBlur();
         blurAlgorithm.Init(tis.BlurConfig);
         var passData = new TISPassData {
-            cameraColorTarget = renderer.cameraColorTarget,
+            cameraColorTarget = renderer.cameraColorTargetHandle.nameID,
             blurAlgorithm     = blurAlgorithm, //hack for now
             blurSource        = tis,
             isPreviewing      = tis.preview
