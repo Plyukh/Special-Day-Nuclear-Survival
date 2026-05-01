@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    // fpsTarget == -1: unlimited (Application.targetFrameRate).
+    public const int FpsTargetUnlimited = -1;
+
+    static readonly Color32 FpsCapOrange = new Color32(255, 165, 0, 255);
+
     [SerializeField] private UniversalRenderPipelineAsset urpLowOverride;
     [SerializeField] private UniversalRenderPipelineAsset urpMediumOverride;
     [SerializeField] private UniversalRenderPipelineAsset urpHighOverride;
@@ -247,10 +252,25 @@ public class Settings : MonoBehaviour
     public void FPS60()
     {
         fpsTarget = 60;
-        fpsTargetText.color = Color.green;
+        fpsTargetText.color = FpsCapOrange;
         fpsTargetText.text = "60";
 
         Application.targetFrameRate = 60;
+
+        fpsTargetButton.onClick.RemoveAllListeners();
+        fpsTargetButton.onClick.AddListener(() => AddSound());
+        fpsTargetButton.onClick.AddListener(() => FPSUnlimited());
+
+        saveScript.SaveSettings();
+    }
+
+    public void FPSUnlimited()
+    {
+        fpsTarget = FpsTargetUnlimited;
+        fpsTargetText.color = Color.green;
+        fpsTargetText.text = "60+";
+
+        Application.targetFrameRate = FpsTargetUnlimited;
 
         fpsTargetButton.onClick.RemoveAllListeners();
         fpsTargetButton.onClick.AddListener(() => AddSound());
@@ -261,9 +281,17 @@ public class Settings : MonoBehaviour
 
     public void FPSTarget()
     {
-        if(fpsTarget == 30)
+        if (fpsTarget == 30)
         {
             FPS30();
+        }
+        else if (fpsTarget == 60)
+        {
+            FPS60();
+        }
+        else if (fpsTarget == FpsTargetUnlimited)
+        {
+            FPSUnlimited();
         }
         else
         {
