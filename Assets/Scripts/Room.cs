@@ -60,6 +60,6 @@ public class Room : MonoBehaviour
     public void MeshDisabled()
     {
         mesh.GetComponent<Outline>().enabled = false;
-        mesh.GetComponent<BoxCollider>().enabled = false;
+        mesh.GetComponent<Collider>().enabled = false;
     }
 }
