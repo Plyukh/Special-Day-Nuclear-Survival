@@ -39710,7 +39710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868420212635176387, guid: 8328cb678ee5829469e87c08a958e8c7, type: 3}
       propertyPath: m_Intensity
-      value: 5
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 868420212635176387, guid: 8328cb678ee5829469e87c08a958e8c7, type: 3}
       propertyPath: m_BounceIntensity
@@ -53207,7 +53207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868420212635176387, guid: 8328cb678ee5829469e87c08a958e8c7, type: 3}
       propertyPath: m_Intensity
-      value: 5
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 868420212635176387, guid: 8328cb678ee5829469e87c08a958e8c7, type: 3}
       propertyPath: m_BounceIntensity

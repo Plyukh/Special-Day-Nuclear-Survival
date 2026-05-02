@@ -265,11 +265,11 @@ public class Map : MonoBehaviour
 
         if (transform.parent.parent.GetComponent<QuestSystem>().quests[13].Complete)
         {
-            speed = 50;
+            speed = 100;
         }
         else
         {
-            speed = 25;
+            speed = 50;
         }
     }
 

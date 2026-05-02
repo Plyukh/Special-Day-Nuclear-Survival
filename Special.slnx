@@ -1,11 +1,7 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Google.Android.AppBundle.Editor.csproj" />
-  <Project Path="StompyRobot.SRDebugger.csproj" />
-  <Project Path="StompyRobot.SRF.csproj" />
-  <Project Path="StompyRobot.SRDebugger.Editor.csproj" />
   <Project Path="HarpiaGames.IconCreator.csproj" />
   <Project Path="IconCreatorEditor.csproj" />
-  <Project Path="StompyRobot.SRF.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>
