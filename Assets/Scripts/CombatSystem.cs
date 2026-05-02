@@ -403,17 +403,17 @@ public class CombatSystem : MonoBehaviour
                     {
                         item.number -= 1;
                         Shot = true;
-                        if (item.number == 0)
+                    if (item.number == 0)
+                    {
+                        for (int i = 0; i < character.Inventory.items.Length; i++)
                         {
-                            for (int i = 0; i < character.Inventory.items.Length; i++)
+                            if (character.Inventory.items[i] == item)
                             {
-                                if (character.Inventory.items[i].itemName == item.itemName)
-                                {
-                                    character.Inventory.items[i] = null;
-                                    return;
-                                } 
+                                character.Inventory.items[i] = null;
+                                return;
                             }
                         }
+                    }
 
                         return;
                     }
