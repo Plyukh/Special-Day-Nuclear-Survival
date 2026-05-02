@@ -88276,6 +88276,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1054116116}
+    - target: {fileID: 8397625334887106415, guid: 731666dd274cf1746a08b36c7c61b9d9, type: 3}
+      propertyPath: indonesianText
+      value: Selamat! Anda dapat menyelesaikan permainan! Dunia menghargai tindakan
+        Anda.  Apakah Anda ingin melanjutkan permainan atau memulai yang baru?
+      objectReference: {fileID: 0}
     - target: {fileID: 8639366723698621504, guid: 731666dd274cf1746a08b36c7c61b9d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18

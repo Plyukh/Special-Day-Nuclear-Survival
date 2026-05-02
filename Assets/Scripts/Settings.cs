@@ -7,8 +7,11 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    // fpsTarget == -1: unlimited (Application.targetFrameRate).
+    // fpsTarget == -1 in saves means "60+" mode (no low cap). Do not pass -1 to Application.targetFrameRate on mobile:
+    // Unity treats -1 as the platform default, which is often 30 FPS, not uncapped.
     public const int FpsTargetUnlimited = -1;
+
+    static readonly int UncappedTargetFrameRate = 9999;
 
     static readonly Color32 FpsCapOrange = new Color32(255, 165, 0, 255);
 
@@ -221,6 +224,9 @@ public class Settings : MonoBehaviour
         }
 
         ApplyTextureMipmapLimitForTier(tier);
+
+        // VSync off: avoids 60↔30Hz halving when a frame misses the display refresh (especially with uncapped / high targetFrameRate).
+        QualitySettings.vSyncCount = 0;
     }
 
     public void ShadowsOn()
@@ -309,7 +315,7 @@ public class Settings : MonoBehaviour
         fpsTargetText.color = Color.green;
         fpsTargetText.text = "60+";
 
-        Application.targetFrameRate = FpsTargetUnlimited;
+        Application.targetFrameRate = UncappedTargetFrameRate;
 
         fpsTargetButton.onClick.RemoveAllListeners();
         fpsTargetButton.onClick.AddListener(() => AddSound());

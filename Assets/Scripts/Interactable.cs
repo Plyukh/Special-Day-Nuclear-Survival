@@ -54,11 +54,12 @@ public class Interactable : MonoBehaviour, IUse
     {
         if (outline != null)
         {
-            if (transform.parent.name == "Car")
+            Transform parent = transform.parent;
+            if (parent != null && parent.name == "Car")
             {
                 outline.OutlineWidth = 2;
             }
-            else if (room.find)
+            else if (room != null && room.find)
             {
                 outline.OutlineWidth = 2;
             }

@@ -51,10 +51,12 @@ public class Room : MonoBehaviour
 
     public void Find()
     {
-        if(mesh != null)
-        {
-            mesh.material.color -= new Color32(0, 0, 0, 2);
-        }
+        if (mesh == null)
+            return;
+        if (mesh.GetComponent<CubeObject>() != null)
+            return;
+
+        mesh.material.color -= new Color32(0, 0, 0, 2);
     }
 
     public void MeshDisabled()

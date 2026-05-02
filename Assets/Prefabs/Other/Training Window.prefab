@@ -33,7 +33,6 @@ RectTransform:
   m_Children:
   - {fileID: 8483279258281741432}
   m_Father: {fileID: 3322250911113579218}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -167,7 +166,6 @@ RectTransform:
   m_Children:
   - {fileID: 3532580805341457284}
   m_Father: {fileID: 8483279258281741432}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -314,7 +312,6 @@ RectTransform:
   - {fileID: 335224872437759191}
   - {fileID: 7214585269745711563}
   m_Father: {fileID: 6403035404336516417}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -458,7 +455,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840926793892349683}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -537,7 +533,6 @@ RectTransform:
   - {fileID: 1471771708176470568}
   - {fileID: 4813947330348837622}
   m_Father: {fileID: 6403035404336516417}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -695,7 +690,6 @@ RectTransform:
   m_Children:
   - {fileID: 6801120591800045207}
   m_Father: {fileID: 8483279258281741432}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -839,7 +833,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8119215830838690154}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -915,7 +908,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8483279258281741432}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1001,7 +993,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6403035404336516417}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1084,7 +1075,6 @@ RectTransform:
   - {fileID: 8119215830838690154}
   - {fileID: 840926793892349683}
   m_Father: {fileID: 3322250911113579218}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1161,7 +1151,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8119215830838690154}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1220,7 +1209,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1337,7 +1327,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8483279258281741432}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1413,7 +1402,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8483279258281741432}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1494,7 +1482,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840926793892349683}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1553,7 +1540,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bbb5443aa21aa6e49be87bc0a91815ff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1648,10 +1636,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3322250911113579218}
-  - component: {fileID: 5465577350947402994}
-  - component: {fileID: 8773613841416705213}
   - component: {fileID: 6360659763437629892}
   - component: {fileID: 2369311047693889861}
+  - component: {fileID: 661249754768536968}
+  - component: {fileID: 4101577931824475883}
   m_Layer: 5
   m_Name: Training Window
   m_TagString: Untagged
@@ -1674,59 +1662,15 @@ RectTransform:
   - {fileID: 6403035404336516417}
   - {fileID: 106236524666048035}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 1170, y: 152.34375}
   m_SizeDelta: {x: 960, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5465577350947402994
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7477662154685455055}
-  m_CullTransparentMesh: 1
---- !u!114 &8773613841416705213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7477662154685455055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 96c5704d0681e35408630c488fc0c234, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
-  source: {fileID: 0}
-  vibrancy: 0
-  brightness: 0
-  flatten: 0.15
-  m_spriteBlending: 0
 --- !u!95 &6360659763437629892
 Animator:
-  serializedVersion: 4
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1740,10 +1684,12 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2369311047693889861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,6 +1703,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  languageManager: {fileID: 0}
+  questSystem: {fileID: 0}
+  map: {fileID: 0}
+  saveScript: {fileID: 0}
   complete: 0
   blueprints:
   - {fileID: 0}
@@ -1822,6 +1772,8 @@ MonoBehaviour:
       \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436 \u0441\u0434\u0432\u0438\u043D\u0443\u043B\u0441\u044F
       \u0441 \u043C\u0435\u0441\u0442\u0430 \u0438 \u0440\u0430\u0437\u0432\u0435\u044F\u043B
       \u0442\u0443\u043C\u0430\u043D."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 0000000001000000020000000300000004000000
@@ -1918,6 +1870,8 @@ MonoBehaviour:
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 00000000
     interactableObjectIndexActiveF: 
@@ -2025,6 +1979,8 @@ MonoBehaviour:
       \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F.
       \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435
       \u043E\u0431\u0430 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 00000000
@@ -2121,6 +2077,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -2229,6 +2187,8 @@ MonoBehaviour:
       \u0447\u0442\u043E\u0431\u044B \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u0420\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C\", \u0430 \u0437\u0430\u0442\u0435\u043C
       \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 01000000
     interactableObjectIndexActiveF: 
@@ -2325,6 +2285,8 @@ MonoBehaviour:
       \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
       \u0432 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u0443\u044E \u044F\u0447\u0435\u0439\u043A\u0443
       \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 01000000
@@ -2424,6 +2386,8 @@ MonoBehaviour:
       \u043F\u0440\u0430\u0432\u043E\u043C \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0437\u0430\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -2523,6 +2487,8 @@ MonoBehaviour:
       \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
       \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435
       \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 02000000
     interactableObjectIndexActiveF: 
@@ -2618,6 +2584,8 @@ MonoBehaviour:
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 02000000
@@ -2721,6 +2689,8 @@ MonoBehaviour:
       \u0432\u0430\u0440\u0438\u0430\u043D\u0442 \u043E\u0442\u0432\u0435\u0442\u0430,
       \u0438 \u0434\u0438\u0430\u043B\u043E\u0433\u043E\u0432\u043E\u0435 \u043C\u0435\u043D\u044E
       \u0437\u0430\u043A\u0440\u043E\u0435\u0442\u0441\u044F."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -2821,6 +2791,8 @@ MonoBehaviour:
       \u044D\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C, \u0432\u0430\u043C
       \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u043D\u0430\u0436\u0430\u0442\u044C
       \u043A\u043D\u043E\u043F\u043A\u0443 \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -2931,6 +2903,8 @@ MonoBehaviour:
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u041A\u0440\u0430\u0436\u0430\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3043,6 +3017,8 @@ MonoBehaviour:
       \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0435\u0433\u043E
       \u0432 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u0443\u044E \u044F\u0447\u0435\u0439\u043A\u0443
       \u0432\u0430\u0448\u0435\u0433\u043E \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044F."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3140,6 +3116,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3231,6 +3209,8 @@ MonoBehaviour:
       \u043D\u0443\u0436\u043D\u043E \u0441\u043D\u043E\u0432\u0430 \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0441\u044F.
       \u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0442\u0443 \u0436\u0435 \u043A\u043D\u043E\u043F\u043A\u0443
       \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3331,6 +3311,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E \u043D\u0430\u0443\u043A\u0438."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3439,6 +3421,8 @@ MonoBehaviour:
       \u043C\u0435\u043D\u044E \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F.
       \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
       \"\u0421\u043E\u0437\u0434\u0430\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3539,6 +3523,8 @@ MonoBehaviour:
       \u043D\u0430\u0443\u043A\u0438, \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
       \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u043F\u0440\u0430\u0432\u043E\u043C
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3631,6 +3617,8 @@ MonoBehaviour:
       \u044D\u0442\u043E \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435,
       \u0432\u0430\u043C \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u043D\u0430\u0436\u0430\u0442\u044C
       \u043A\u043D\u043E\u043F\u043A\u0443 \u0441\u043D\u0438\u0437\u0443 \u0441\u043F\u0440\u0430\u0432\u0430."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3731,6 +3719,8 @@ MonoBehaviour:
       \u044F\u0447\u0435\u0439\u043A\u0443 \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u044F.
       \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u0435
       \u0433\u0440\u0430\u043D\u0430\u0442\u0443 \u0438 \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3826,6 +3816,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -3930,6 +3922,8 @@ MonoBehaviour:
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u041D\u0430\u043F\u0430\u0441\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -4039,6 +4033,8 @@ MonoBehaviour:
       \u0432 \u043F\u0440\u0430\u0432\u043E\u043C \u043D\u0438\u0436\u043D\u0435\u043C
       \u0443\u0433\u043B\u0443, \u0447\u0442\u043E\u0431\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
       \u0433\u0440\u0430\u043D\u0430\u0442\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 05000000
@@ -4137,6 +4133,8 @@ MonoBehaviour:
       \u0432 \u043F\u0440\u0430\u0432\u043E\u043C \u043D\u0438\u0436\u043D\u0435\u043C
       \u0443\u0433\u043B\u0443, \u0447\u0442\u043E\u0431\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
       \u0430\u043F\u0442\u0435\u0447\u043A\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 05000000
@@ -4231,6 +4229,8 @@ MonoBehaviour:
       \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
       \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
       \"\u041E\u0431\u044B\u0441\u043A\u0430\u0442\u044C\"."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 05000000
     interactableObjectIndexActiveF: 
@@ -4332,6 +4332,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 05000000
@@ -4430,6 +4432,8 @@ MonoBehaviour:
       \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
       \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0438\u0442\u0435
       \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435 \u043A\u043E\u043C\u043D\u0430\u0442\u044B."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 03000000
     interactableObjectIndexActiveF: 
@@ -4525,6 +4529,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 03000000
@@ -4630,6 +4636,8 @@ MonoBehaviour:
     - "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0443
       \"\u041F\u0435\u0440\u043A\u0438\", \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
       \u0441\u0432\u0435\u0440\u0445\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -4731,6 +4739,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E \u043F\u0435\u0440\u043A\u043E\u0432."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -4823,6 +4833,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C
       \u043C\u0435\u043D\u044E \u0437\u0430\u0434\u0430\u043D\u0438\u0439."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -4917,6 +4929,8 @@ MonoBehaviour:
     - "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0443
       \"\u041A\u0430\u0440\u0442\u0430\", \u043D\u0430\u0436\u0430\u0432 \u043A\u043D\u043E\u043F\u043A\u0443
       \u0441\u0432\u0435\u0440\u0445\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -5017,6 +5031,8 @@ MonoBehaviour:
       \u0443\u0433\u043B\u0443 \u044D\u043A\u0440\u0430\u043D\u0430 \u0434\u043B\u044F
       \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043A\u0440\u044B\u0442\u044C
       \u0433\u043B\u043E\u0431\u0430\u043B\u044C\u043D\u0443\u044E \u043A\u0430\u0440\u0442\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 
     interactableObjectIndexActiveF: 
@@ -5123,6 +5139,8 @@ MonoBehaviour:
       \"\u041E\u0442\u043A\u0440\u044B\u0442\u044C\". \u041F\u043E\u0441\u043B\u0435
       \u044D\u0442\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435
       \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u043A\u043E\u043C\u043D\u0430\u0442\u0443."
+    EngDescription: []
+    IndonesianDescription: []
     Room: {fileID: 0}
     interactableObjectIndexActiveT: 04000000
     interactableObjectIndexActiveF: 
@@ -5205,6 +5223,44 @@ MonoBehaviour:
     Complete: 0
     Active: 0
     NextPart: 33
+--- !u!222 &661249754768536968
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_CullTransparentMesh: 1
+--- !u!114 &4101577931824475883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477662154685455055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8807494933484625714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,7 +5292,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8460044268534925809}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5316,7 +5371,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8100467950182890662}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5401,7 +5455,6 @@ RectTransform:
   - {fileID: 8460044268534925809}
   - {fileID: 8100467950182890662}
   m_Father: {fileID: 106236524666048035}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
