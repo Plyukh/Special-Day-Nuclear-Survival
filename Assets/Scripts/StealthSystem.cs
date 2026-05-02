@@ -11,6 +11,15 @@ public class StealthSystem : MonoBehaviour
     [SerializeField] private Image sunIcon;
     [SerializeField] private Image moonIcon;
 
+    RectTransform iconRectTransform;
+    Camera mainCamera;
+
+    GameObject cachedRoomObject;
+    Room cachedRoom;
+
+    Perk perkStealSlot1;
+    Perk perkStealSlot2;
+
     public Image stealIcon;
 
     public bool stealth;
@@ -20,6 +29,51 @@ public class StealthSystem : MonoBehaviour
     [SerializeField] private float currentRisk;
 
     [HideInInspector] public bool training;
+
+    void Awake()
+    {
+        if (icon != null)
+            iconRectTransform = icon.GetComponent<RectTransform>();
+        mainCamera = Camera.main;
+    }
+
+    void OnEnable()
+    {
+        RefreshPerkCache();
+    }
+
+    void RefreshPerkCache()
+    {
+        perkStealSlot1 = null;
+        perkStealSlot2 = null;
+        if (character == null || character.PerkSystem == null)
+            return;
+        perkStealSlot1 = character.PerkSystem.FindPerk(Skills.Steal, 1);
+        perkStealSlot2 = character.PerkSystem.FindPerk(Skills.Steal, 2);
+    }
+
+    void RefreshRoomCache()
+    {
+        GameObject roomGo = character != null && character.characterMovement != null
+            ? character.characterMovement.CurrentRoom
+            : null;
+
+        if (roomGo == null)
+        {
+            cachedRoom = null;
+            cachedRoomObject = null;
+            return;
+        }
+
+        if (roomGo == cachedRoomObject && cachedRoom != null)
+            return;
+
+        cachedRoomObject = roomGo;
+        cachedRoom = roomGo.GetComponent<Room>();
+    }
+
+    bool StealPerk1Active => perkStealSlot1 != null && perkStealSlot1.Active;
+    bool StealPerk2Active => perkStealSlot2 != null && perkStealSlot2.Active;
 
     public void Stealth()
     {
@@ -37,6 +91,7 @@ public class StealthSystem : MonoBehaviour
             character.SetWeaponTrigger(true);
 
             icon.gameObject.SetActive(true);
+            RefreshPerkCache();
 
             if (stealthButton != null)
             {
@@ -55,15 +110,17 @@ public class StealthSystem : MonoBehaviour
 
     private void Update()
     {
+        RefreshRoomCache();
+
         //Steal Perk
         if (stealth)
         {
-            light = character.characterMovement.CurrentRoom.GetComponent<Room>().light;
+            light = cachedRoom != null && cachedRoom.light;
         }
-        else if (tag == "Player" && character.PerkSystem.FindPerk(Skills.Steal, 1).Active)
+        else if (tag == "Player" && StealPerk1Active)
         {
-            light = character.characterMovement.CurrentRoom.GetComponent<Room>().light;
-            if (light == false || character.PerkSystem.FindPerk(Skills.Steal, 2).Active)
+            light = cachedRoom != null && cachedRoom.light;
+            if (light == false || StealPerk2Active)
             {
                 EffectsUI.AccuracySteathEffect(true);
             }
@@ -75,20 +132,28 @@ public class StealthSystem : MonoBehaviour
 
         if (stealth)
         {
-            RectTransform iconRect = icon.GetComponent<RectTransform>();
+            if (mainCamera == null)
+                mainCamera = Camera.main;
 
-            iconRect.position = Camera.main.WorldToScreenPoint(character.transform.position);
-            iconRect.anchoredPosition = new Vector2(iconRect.anchoredPosition.x, iconRect.anchoredPosition.y + 175);
-            icon.fillAmount = currentRisk / maxRisk;
+            if (iconRectTransform != null && mainCamera != null)
+            {
+                iconRectTransform.position = mainCamera.WorldToScreenPoint(character.transform.position);
+                iconRectTransform.anchoredPosition = new Vector2(iconRectTransform.anchoredPosition.x, iconRectTransform.anchoredPosition.y + 175);
+            }
 
-            sunIcon.transform.Rotate(0, 0, 0.1f);
-            moonIcon.transform.Rotate(0, 0, 0.1f);
+            if (icon != null)
+                icon.fillAmount = currentRisk / maxRisk;
+
+            if (sunIcon != null)
+                sunIcon.transform.Rotate(0, 0, 0.1f);
+            if (moonIcon != null)
+                moonIcon.transform.Rotate(0, 0, 0.1f);
 
             float baseRisk = 25;
 
             if (light)
             {
-                if (tag == "Player" && character.PerkSystem.FindPerk(Skills.Steal, 2).Active)
+                if (tag == "Player" && StealPerk2Active)
                 {
                     EffectsUI.SteathEffect(true, true);
                     baseRisk = 25;
@@ -99,35 +164,46 @@ public class StealthSystem : MonoBehaviour
                     baseRisk = 50;
                 }
 
-                sunIcon.gameObject.SetActive(true);
-                moonIcon.gameObject.SetActive(false);
+                if (sunIcon != null)
+                    sunIcon.gameObject.SetActive(true);
+                if (moonIcon != null)
+                    moonIcon.gameObject.SetActive(false);
             }
             else
             {
                 baseRisk = 25;
                 EffectsUI.SteathEffect(true, true);
 
-                sunIcon.gameObject.SetActive(false);
-                moonIcon.gameObject.SetActive(true);
+                if (sunIcon != null)
+                    sunIcon.gameObject.SetActive(false);
+                if (moonIcon != null)
+                    moonIcon.gameObject.SetActive(true);
             }
 
-            if (character.combatSystem.Target() != null)
+            GameObject combatTargetGo = character.combatSystem.Target();
+
+            if (combatTargetGo != null)
             {
                 HealthSystem healthSystemTarget = null;
-                for (int i = 0; i < character.combatSystem.targets.Count; i++)
+                var targets = character.combatSystem.targets;
+                for (int i = 0; i < targets.Count; i++)
                 {
-                    Character characterTarget = character.combatSystem.targets[i].GetComponent<Character>();
-                    healthSystemTarget = characterTarget.GetComponent<HealthSystem>();
+                    GameObject tg = targets[i];
+                    if (tg == null)
+                        continue;
+                    Character characterTarget = tg.GetComponent<Character>();
+                    healthSystemTarget = tg.GetComponent<HealthSystem>();
+                    CombatSystem combatSys = tg.GetComponent<CombatSystem>();
                     healthSystemTarget.ActiveSteathOutline(true);
-                    if (Vector3.Distance(transform.position, character.combatSystem.targets[i].transform.position) > characterTarget.GetComponent<CombatSystem>().radius ||
+                    if (Vector3.Distance(transform.position, tg.transform.position) > combatSys.radius ||
                         characterTarget.characterMovement.CurrentRoom != character.characterMovement.CurrentRoom)
                     {
                         healthSystemTarget.ActiveSteathOutline(false);
-                        character.combatSystem.ResetCombat(character.combatSystem.targets[i]);
+                        character.combatSystem.ResetCombat(tg);
                     }
                 }
 
-                if(character.combatSystem.targets.Count > 0)
+                if(targets.Count > 0)
                 {
                     if (character.Inventory.ShowPanel() == false)
                     {
@@ -137,13 +213,14 @@ public class StealthSystem : MonoBehaviour
                     if (currentRisk >= maxRisk)
                     {
                         stealth = false;
-                        icon.gameObject.SetActive(false);
+                        if (icon != null)
+                            icon.gameObject.SetActive(false);
                         character.Inventory.CloseInventory();
 
-                        for (int i = 0; i < character.combatSystem.targets.Count; i++)
+                        for (int i = 0; i < targets.Count; i++)
                         {
                             healthSystemTarget.ActiveSteathOutline(false);
-                            character.combatSystem.ResetCombat(character.combatSystem.targets[i]);
+                            character.combatSystem.ResetCombat(targets[i]);
                         }
                     }
                 }
