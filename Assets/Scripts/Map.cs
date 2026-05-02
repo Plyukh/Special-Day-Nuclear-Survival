@@ -3,6 +3,11 @@ using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
+    const float FogRevealRadius = 175f;
+    const float CellArrivalDistSqr = 1f;
+
+    float fogRevealRadiusSqr;
+
     [SerializeField] private LanguageManager languageManager;
     [SerializeField] private Settings settings;
     [SerializeField] private Animator infoObject;
@@ -44,84 +49,123 @@ public class Map : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        fogRevealRadiusSqr = FogRevealRadius * FogRevealRadius;
+    }
+
+    bool TryStartRandomEncounterAfterTravelTimer()
+    {
+        if (encounterCell == null || allRandomEncounters == null || encounterCell.randomEncounters == null)
+            return false;
+
+        string[] encounterRandom = encounterCell.randomEncounters;
+
+        for (int i = 0; i < allRandomEncounters.Length; i++)
+        {
+            if (attendedRandomEncounter[i])
+                continue;
+
+            string allName = allRandomEncounters[i];
+            for (int j = 0; j < encounterRandom.Length; j++)
+            {
+                if (encounterRandom[j] != allName)
+                    continue;
+
+                Fog currentFog = encounterCell;
+                lastCell = currentFog.GetComponent<Button>();
+                currentCell = null;
+
+                RandomEncounter(currentFog);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void Update()
     {
-        if (canTravel)
+        if (!canTravel || currentCell == null)
+            return;
+
+        playerPoint.transform.position = Vector2.MoveTowards(
+            (Vector2)playerPoint.transform.position,
+            (Vector2)currentCell.transform.position,
+            speed * Time.deltaTime);
+
+        if (timeToEncounter > 0f)
         {
-            if(currentCell != null)
+            currentTimeToEncounter += Time.deltaTime;
+            if (currentTimeToEncounter >= timeToEncounter)
             {
-                playerPoint.transform.position = Vector2.MoveTowards(playerPoint.transform.position, currentCell.transform.position, speed * Time.deltaTime);
+                if (TryStartRandomEncounterAfterTravelTimer())
+                    return;
 
-                if(timeToEncounter > 0)
+                currentTimeToEncounter = 0f;
+            }
+        }
+
+        if (fog != null)
+        {
+            for (int i = 0; i < fog.Length; i++)
+            {
+                Fog f = fog[i];
+                if (f == null)
+                    continue;
+
+                Vector2 fogPos = f.transform.position;
+                Vector2 pp = playerPoint.transform.position;
+                if ((fogPos - pp).sqrMagnitude > fogRevealRadiusSqr)
+                    continue;
+
+                if (!f.find)
                 {
-                    currentTimeToEncounter += Time.deltaTime;
-                    if(currentTimeToEncounter >= timeToEncounter)
-                    {
-                        for (int i = 0; i < allRandomEncounters.Length; i++)
-                        {
-                            for (int j = 0; j < encounterCell.randomEncounters.Length; j++)
-                            {
-                                if (encounterCell.randomEncounters[j] == allRandomEncounters[i])
-                                {
-                                    if (attendedRandomEncounter[i] == false)
-                                    {
-                                        Fog currentFog = encounterCell;
-                                        lastCell = currentFog.GetComponent<Button>();
-                                        currentCell = null;
-
-                                        RandomEncounter(currentFog);
-                                        return;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                for (int i = 0; i < fog.Length; i++)
-                {
-                    if(Vector2.Distance(fog[i].transform.position, playerPoint.transform.position) <= 175)
-                    {
-                        fog[i].find = true;
-                        fog[i].Find();
-                    }
-                }
-
-                if(Vector3.Distance(playerPoint.transform.position, currentCell.transform.position) <= 1 && currentCell.GetComponent<Fog>().location.sceneName != "")
-                {
-                    Fog currentFog = currentCell.GetComponent<Fog>();
-                    lastCell = currentCell;
-                    currentCell = null;
-                    infoObject.gameObject.SetActive(false);
-                    infoObject.gameObject.SetActive(true);
-                    if(languageManager.currentLanguage == Language.Russian)
-                    {
-                        nameLocation.text = currentFog.location.locationName;
-                        descriptionLocation.text = currentFog.location.description;
-                    }
-                    else if (languageManager.currentLanguage == Language.English)
-                    {
-                        nameLocation.text = currentFog.location.engLocationName;
-                        descriptionLocation.text = currentFog.location.engDescription;
-                    }
-                    else if (languageManager.currentLanguage == Language.Indonesian)
-                    {
-                        nameLocation.text = currentFog.location.indonesianLocationName;
-                        descriptionLocation.text = currentFog.location.indonesianDescription;
-                    }
-                    imageLocation.sprite = currentFog.location.spriteLocation;
-
-                    locationsButton.onClick.RemoveAllListeners();
-                    locationsButton.onClick.AddListener(() => AddSound());
-                    locationsButton.onClick.AddListener(() => SaveMap());
-                    locationsButton.onClick.AddListener(() => LoadScene(currentFog.location.sceneName));
-                }
-                else if(Vector3.Distance(playerPoint.transform.position, currentCell.transform.position) <= 1)
-                {
-                    timeToEncounter = 0;
-                    currentTimeToEncounter = 0;
+                    f.find = true;
+                    f.Find();
                 }
             }
+        }
+
+        Fog cellFog = currentCell.GetComponent<Fog>();
+        if (cellFog == null)
+            return;
+
+        Vector3 playerPos3 = playerPoint.transform.position;
+        float distToCellSqr = (playerPos3 - currentCell.transform.position).sqrMagnitude;
+
+        if (distToCellSqr <= CellArrivalDistSqr && cellFog.location.sceneName != "")
+        {
+            lastCell = currentCell;
+            currentCell = null;
+            infoObject.gameObject.SetActive(false);
+            infoObject.gameObject.SetActive(true);
+            if(languageManager.currentLanguage == Language.Russian)
+            {
+                nameLocation.text = cellFog.location.locationName;
+                descriptionLocation.text = cellFog.location.description;
+            }
+            else if (languageManager.currentLanguage == Language.English)
+            {
+                nameLocation.text = cellFog.location.engLocationName;
+                descriptionLocation.text = cellFog.location.engDescription;
+            }
+            else if (languageManager.currentLanguage == Language.Indonesian)
+            {
+                nameLocation.text = cellFog.location.indonesianLocationName;
+                descriptionLocation.text = cellFog.location.indonesianDescription;
+            }
+            imageLocation.sprite = cellFog.location.spriteLocation;
+
+            locationsButton.onClick.RemoveAllListeners();
+            locationsButton.onClick.AddListener(() => AddSound());
+            locationsButton.onClick.AddListener(() => SaveMap());
+            locationsButton.onClick.AddListener(() => LoadScene(cellFog.location.sceneName));
+        }
+        else if (distToCellSqr <= CellArrivalDistSqr)
+        {
+            timeToEncounter = 0;
+            currentTimeToEncounter = 0;
         }
     }
 
@@ -221,11 +265,11 @@ public class Map : MonoBehaviour
 
         if (transform.parent.parent.GetComponent<QuestSystem>().quests[13].Complete)
         {
-            speed = 100;
+            speed = 50;
         }
         else
         {
-            speed = 50;
+            speed = 25;
         }
     }
 

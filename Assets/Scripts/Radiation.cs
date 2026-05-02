@@ -6,9 +6,20 @@ public class Radiation : MonoBehaviour
     [SerializeField] private Animator radiationIcon;
     [SerializeField] private Slider radiationSlider;
 
+    Character character;
+    HealthSystem healthSystem;
+    CharacterMovement characterMovement;
+
     private float maxRad = 1000;
     public float currentRad;
     public float rad;
+
+    void Awake()
+    {
+        TryGetComponent(out character);
+        TryGetComponent(out healthSystem);
+        TryGetComponent(out characterMovement);
+    }
 
     public void StartRad()
     {
@@ -17,7 +28,8 @@ public class Radiation : MonoBehaviour
         if (currentRad > 0)
         {
             radiationIcon.SetBool("Rad", true);
-            if (GetComponent<CharacterMovement>().CurrentRoom.GetComponent<Room>().radiactive)
+            if (characterMovement != null && characterMovement.CurrentRoom != null &&
+                characterMovement.CurrentRoom.GetComponent<Room>().radiactive)
             {
                 StartRadiation();
             }
@@ -36,13 +48,13 @@ public class Radiation : MonoBehaviour
         {
             EffectsUI.RadiationEffect(true);
 
-            if (GetComponent<Character>().currentArmor != null)
+            if (character != null && healthSystem != null && character.currentArmor != null)
             {
-                newRad = rad / 100 * GetComponent<Character>().currentArmor.protection[4] + GetComponent<HealthSystem>().protection[4];
+                newRad = rad / 100 * character.currentArmor.protection[4] + healthSystem.protection[4];
             }
-            else if(GetComponent<HealthSystem>().protection[4] > 0)
+            else if(healthSystem != null && healthSystem.protection[4] > 0)
             {
-                newRad = rad / 100 * GetComponent<HealthSystem>().protection[4];
+                newRad = rad / 100 * healthSystem.protection[4];
             }
         }
         else
@@ -58,7 +70,8 @@ public class Radiation : MonoBehaviour
             currentRad = maxRad - 1;
             rad = 0;
             radiationIcon.SetBool("Rad", false);
-            GetComponent<HealthSystem>().Death();
+            if (healthSystem != null)
+                healthSystem.Death();
         }
         if (currentRad <= 0)
         {
