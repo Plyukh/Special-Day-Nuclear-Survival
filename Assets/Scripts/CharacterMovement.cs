@@ -8,6 +8,11 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject effect;
 
+    CameraZoom cameraZoom;
+    Radiation radiation;
+    HealthSystem healthSystem;
+    CapsuleCollider capsuleCollider;
+
     [SerializeField] private Character character;
     [SerializeField] private InteractableUI interactableUI;
     [SerializeField] private Skill selectSkill;
@@ -86,6 +91,41 @@ public class CharacterMovement : MonoBehaviour
         npcLayer = LayerMask.NameToLayer("NPC");
 
         navigationRaycastMask = ~(LayerMask.GetMask("UI", "Ignore Raycast"));
+
+        if (playerCamera != null)
+            cameraZoom = playerCamera.GetComponent<CameraZoom>();
+        TryGetComponent(out radiation);
+        TryGetComponent(out healthSystem);
+        TryGetComponent(out capsuleCollider);
+    }
+
+    static bool TryFindChildInteractable(Transform targetRoot, out Interactable interactable, out Collider interactCollider)
+    {
+        interactable = null;
+        interactCollider = null;
+        for (int i = 0; i < targetRoot.childCount; i++)
+        {
+            Transform c = targetRoot.GetChild(i);
+            if (c.TryGetComponent(out interactable))
+            {
+                interactCollider = c.GetComponent<Collider>();
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static bool TryFindChildDoor(Transform root, out Door door)
+    {
+        for (int i = 0; i < root.childCount; i++)
+        {
+            if (root.GetChild(i).TryGetComponent(out door))
+                return true;
+        }
+
+        door = null;
+        return false;
     }
 
     private void LateUpdate()
@@ -96,7 +136,7 @@ public class CharacterMovement : MonoBehaviour
         if (!PrimaryPointerInput.GetPrimaryUpThisFrame(out Vector2 tapScreen) || !canMove || playerCamera == null)
             return;
 
-        if (playerCamera.GetComponent<CameraZoom>().CameraDrag)
+        if (cameraZoom != null && cameraZoom.CameraDrag)
             return;
 
         Ray ray = playerCamera.ScreenPointToRay(tapScreen);
@@ -121,8 +161,7 @@ public class CharacterMovement : MonoBehaviour
                 continue;
 
             GameObject hitGo = h.collider.gameObject;
-            bool hasCubeObject = hitGo.GetComponent<CubeObject>() != null ||
-                                 hitGo.GetComponentInChildren<CubeObject>(true) != null;
+            bool hasCubeObject = hitGo.GetComponentInChildren<CubeObject>(true) != null;
 
             if (layer == floorLayer || layer == interactableLayer || hasCubeObject)
             {
@@ -172,16 +211,13 @@ public class CharacterMovement : MonoBehaviour
         Instantiate(effect, targetPoint, effect.transform.rotation, gameObject.transform.parent);
         if (target.layer == interactableLayer)
         {
-            for (int i = 0; i < target.transform.childCount; i++)
+            if (TryFindChildInteractable(target.transform, out Interactable foundInteractable, out _))
             {
-                if (target.transform.GetChild(i).GetComponent<Interactable>())
-                {
-                    playerNavMeshAgent.stoppingDistance = interatableStoppingDistance;
-                    interactableTarget = target.transform.GetChild(i).GetComponent<Interactable>();
-                    interactableUI.ShowButtons(interactableTarget, character);
+                playerNavMeshAgent.stoppingDistance = interatableStoppingDistance;
+                interactableTarget = foundInteractable;
+                interactableUI.ShowButtons(interactableTarget, character);
 
-                    return;
-                }
+                return;
             }
         }
         else
@@ -207,9 +243,11 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(character.combatSystem.Target() != null && character.stealthSystem.stealth == false)
+        GameObject combatTarget = character.combatSystem.Target();
+
+        if (combatTarget != null && character.stealthSystem.stealth == false)
         {
-            target = character.combatSystem.Target();
+            target = combatTarget;
             playerNavMeshAgent.SetDestination(target.transform.position);
             move = true;
         }
@@ -222,22 +260,18 @@ public class CharacterMovement : MonoBehaviour
         {
             if(target != null)
             {
-                if (target.layer == LayerMask.NameToLayer("Interactable"))
+                if (target.layer == interactableLayer)
                 {
-                    for (int i = 0; i < target.transform.childCount; i++)
+                    if (TryFindChildInteractable(target.transform, out Interactable foundInteractable, out Collider col))
                     {
-                        if (target.transform.GetChild(i).GetComponent<Interactable>())
-                        {
-                            targetPoint = target.transform.GetChild(i).GetComponent<Collider>().bounds.center;
-                            interactableTarget = target.transform.GetChild(i).GetComponent<Interactable>();
-
-                            break;
-                        }
+                        targetPoint = col != null ? col.bounds.center : foundInteractable.transform.position;
+                        interactableTarget = foundInteractable;
                     }
                 }
                 else
                 {
-                    targetPoint = character.combatSystem.Target().transform.position;
+                    if (combatTarget != null)
+                        targetPoint = combatTarget.transform.position;
                 }
                 playerNavMeshAgent.SetDestination(targetPoint);
                 move = true;
@@ -255,7 +289,9 @@ public class CharacterMovement : MonoBehaviour
                 character.animator.SetBool("Running", true);
             }
 
-            if (character.combatSystem.Target() != null && character.stealthSystem.stealth == false)
+            combatTarget = character.combatSystem.Target();
+
+            if (combatTarget != null && character.stealthSystem.stealth == false)
             {
                 float Distance = 0;
                 if (character.currentWeapon != null)
@@ -279,7 +315,7 @@ public class CharacterMovement : MonoBehaviour
                     Distance = 1.25f;
                 }
 
-                if (Vector3.Distance(playerNavMeshAgent.transform.position, character.combatSystem.Target().transform.position) <= Distance)
+                if (Vector3.Distance(playerNavMeshAgent.transform.position, combatTarget.transform.position) <= Distance)
                 {
                     Vector3 direction = (target.transform.position - transform.position).normalized;
                     Quaternion lookRotation = Quaternion.LookRotation(direction);
@@ -288,10 +324,8 @@ public class CharacterMovement : MonoBehaviour
                     character.combatSystem.StartCombat();
                     if (tag == "Player")
                     {
-                        if (character.combatSystem.Target().GetComponent<HealthSystem>().health > 0)
-                        {
-                            character.combatSystem.Target().GetComponent<HealthSystem>().SpawnSlider();
-                        }
+                        if (combatTarget.TryGetComponent(out HealthSystem targetHealth) && targetHealth.health > 0)
+                            targetHealth.SpawnSlider();
                     }
                 }
             }
@@ -301,17 +335,12 @@ public class CharacterMovement : MonoBehaviour
                 {
                     if(target != null)
                     {
-                        if (target.layer == LayerMask.NameToLayer("Interactable"))
+                        if (target.layer == interactableLayer)
                         {
-                            for (int i = 0; i < target.transform.childCount; i++)
+                            if (TryFindChildInteractable(target.transform, out Interactable foundInteractable, out _))
                             {
-                                if (target.transform.GetChild(i).GetComponent<Interactable>())
-                                {
-                                    interactableTarget = target.transform.GetChild(i).GetComponent<Interactable>();
-                                    StartInteract();
-
-                                    break;
-                                }
+                                interactableTarget = foundInteractable;
+                                StartInteract();
                             }
                         }
                     }
@@ -353,21 +382,15 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        if (other.gameObject.layer == interactableLayer)
         {
-            for (int i = 0; i < other.gameObject.transform.childCount; i++)
+            if (TryFindChildDoor(other.gameObject.transform, out Door door))
             {
-                if (other.gameObject.transform.GetChild(i).GetComponent<Door>())
+                if (door.open == false)
                 {
-                    Door door = other.gameObject.transform.GetChild(i).GetComponent<Door>();
-
-                    if (door.open == false)
-                    {
-                        selectSkill = null;
-                        interactableTarget = door;
-                        StartInteract();
-                    }
-                    break;
+                    selectSkill = null;
+                    interactableTarget = door;
+                    StartInteract();
                 }
             }
         }
@@ -386,19 +409,16 @@ public class CharacterMovement : MonoBehaviour
             {
                 Room targetRoom = room.GetComponent<Room>();
 
-                if (targetRoom.radiactive)
+                if (radiation != null)
                 {
-                    GetComponent<Radiation>().StartRadiation();
-                }
-                else
-                {
-                    GetComponent<Radiation>().StopRadiation();
+                    if (targetRoom.radiactive)
+                        radiation.StartRadiation();
+                    else
+                        radiation.StopRadiation();
                 }
 
-                if (targetRoom.quest >= 0)
-                {
-                    GetComponent<HealthSystem>().questSystem.CompletePart(room.GetComponent<Room>().quest, targetRoom.questPart);
-                }
+                if (targetRoom.quest >= 0 && healthSystem != null)
+                    healthSystem.questSystem.CompletePart(targetRoom.quest, targetRoom.questPart);
 
                 if(targetRoom.find == false)
                 {
@@ -424,7 +444,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void StartInteract()
     {
-        if (interactableTarget.GetComponent<Furniture>())
+        if (interactableTarget.TryGetComponent<Furniture>(out _))
         {
             if (selectSkill == null)
             {
@@ -439,7 +459,7 @@ public class CharacterMovement : MonoBehaviour
                 character.SetWeaponTrigger(true);
             }
         }
-        else if (interactableTarget.GetComponent<Door>())
+        else if (interactableTarget.TryGetComponent<Door>(out _))
         {
             if (interactableTarget.training)
             {
@@ -453,26 +473,26 @@ public class CharacterMovement : MonoBehaviour
                 character.SetWeaponTrigger(true);
             }
         }
-        else if (interactableTarget.transform.parent.tag == "Car")
+        else if (interactableTarget.transform.parent != null && interactableTarget.transform.parent.CompareTag("Car"))
         {
             interactableTarget.InteracteblePosition(playerNavMeshAgent.gameObject);
             character.animator.SetTrigger("Use");
             character.SetWeaponTrigger(true);
         }
-        else if (interactableTarget.GetComponent<Travel>() || interactableTarget.GetComponent<TravelSearch>())
+        else if (interactableTarget.TryGetComponent<Travel>(out _) || interactableTarget.TryGetComponent<TravelSearch>(out _))
         {
             interactableTarget.Use();
             canMove = false;
         }
-        else if (interactableTarget.GetComponent<Person>())
+        else if (interactableTarget.TryGetComponent<Person>(out Person person))
         {
             if (character.stealthSystem.stealth)
             {
                 character.animator.SetTrigger("Use");
             }
-            else if (interactableTarget.GetComponent<Person>().Character.combatSystem.Aggressive == false)
+            else if (person.Character.combatSystem.Aggressive == false)
             {
-                interactableTarget.GetComponent<Person>().Dialogue();
+                person.Dialogue();
             }
         }
         else
@@ -493,7 +513,10 @@ public class CharacterMovement : MonoBehaviour
         oldInteractableTarget = interactableTarget;
         interact = true;
         StopMovement();
-        Camera.main.GetComponent<CameraZoom>().OnPlayerPosition();
+        if (cameraZoom != null)
+            cameraZoom.OnPlayerPosition();
+        else if (Camera.main != null && Camera.main.TryGetComponent<CameraZoom>(out CameraZoom mainZoom))
+            mainZoom.OnPlayerPosition();
     }
 
     private void Interact()
@@ -502,7 +525,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (selectSkill == null)
             {
-                if (interactableTarget.GetComponent<Furniture>() || interactableTarget.GetComponent<Item>())
+                if (interactableTarget.TryGetComponent<Furniture>(out _) || interactableTarget.TryGetComponent<Item>(out _))
                 {
                     interactableTarget.Use(character.animator);
                 }
@@ -549,7 +572,9 @@ public class CharacterMovement : MonoBehaviour
     }
     public void MoveToCombat()
     {
-        CombatSystem targetCombatSystem = interactableTarget.GetComponent<Person>().Character.combatSystem;
+        Person person = interactableTarget.GetComponent<Person>();
+        CombatSystem targetCombatSystem = person.Character.combatSystem;
+        CharacterMovement leaderMovement = targetCombatSystem.GetComponent<CharacterMovement>();
 
         targetCombatSystem.CanDialogue = false;
         targetCombatSystem.Aggressive = true;
@@ -559,7 +584,9 @@ public class CharacterMovement : MonoBehaviour
         {
             item.combatSystem.CanDialogue = false;
             item.combatSystem.Aggressive = true;
-            if(targetCombatSystem.GetComponent<CharacterMovement>().CurrentRoom.name == item.characterMovement.CurrentRoom.name)
+            if (leaderMovement != null && item.characterMovement != null &&
+                leaderMovement.CurrentRoom != null && item.characterMovement.CurrentRoom != null &&
+                leaderMovement.CurrentRoom.name == item.characterMovement.CurrentRoom.name)
             {
                 item.combatSystem.radius = 99999;
             }
@@ -608,28 +635,28 @@ public class CharacterMovement : MonoBehaviour
 
     public void PlayFootstepsSound()
     {
-        Room room = CurrentRoom.GetComponent<Room>();
+        Room roomComp = CurrentRoom.GetComponent<Room>();
         if (blood)
         {
             footSteps.clip = audioClips[Random.Range(50, 60)];
         }
-        else if(room.roomType == RoomType.Metal)
+        else if(roomComp.roomType == RoomType.Metal)
         {
             footSteps.clip = audioClips[Random.Range(0,10)];
         }
-        else if(room.roomType == RoomType.Grass)
+        else if(roomComp.roomType == RoomType.Grass)
         {
             footSteps.clip = audioClips[Random.Range(10, 20)];
         }
-        else if (room.roomType == RoomType.Wood)
+        else if (roomComp.roomType == RoomType.Wood)
         {
             footSteps.clip = audioClips[Random.Range(20, 30)];
         }
-        else if (room.roomType == RoomType.Rock)
+        else if (roomComp.roomType == RoomType.Rock)
         {
             footSteps.clip = audioClips[Random.Range(30, 40)];
         }
-        else if (room.roomType == RoomType.Dirty)
+        else if (roomComp.roomType == RoomType.Dirty)
         {
             footSteps.clip = audioClips[Random.Range(40, 50)];
         }
@@ -639,18 +666,26 @@ public class CharacterMovement : MonoBehaviour
 
     public void SleepCollider()
     {
-        GetComponent<CapsuleCollider>().center += new Vector3(0,-0.5f, -2);
+        CapsuleCollider c = capsuleCollider != null ? capsuleCollider : GetComponent<CapsuleCollider>();
+        if (c != null)
+            c.center += new Vector3(0,-0.5f, -2);
     }
     public void BaseSleepCollider()
     {
-        GetComponent<CapsuleCollider>().center += new Vector3(0, 0.5f, 2f);
+        CapsuleCollider c = capsuleCollider != null ? capsuleCollider : GetComponent<CapsuleCollider>();
+        if (c != null)
+            c.center += new Vector3(0, 0.5f, 2f);
     }
     public void SitCollider()
     {
-        GetComponent<CapsuleCollider>().center += new Vector3(0, -0.25f, -0.25f);
+        CapsuleCollider c = capsuleCollider != null ? capsuleCollider : GetComponent<CapsuleCollider>();
+        if (c != null)
+            c.center += new Vector3(0, -0.25f, -0.25f);
     }
     public void BaseSitCollider()
     {
-        GetComponent<CapsuleCollider>().center += new Vector3(0, 0.25f, 0.25f);
+        CapsuleCollider c = capsuleCollider != null ? capsuleCollider : GetComponent<CapsuleCollider>();
+        if (c != null)
+            c.center += new Vector3(0, 0.25f, 0.25f);
     }
 }

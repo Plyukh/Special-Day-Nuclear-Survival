@@ -4230,7 +4230,7 @@ MonoBehaviour:
   mesh: {fileID: 175837087}
   roomType: 2
   find: 0
-  light: 0
+  light: 1
   radiactive: 0
   quest: -1
   questPart: -1
@@ -28943,7 +28943,7 @@ MonoBehaviour:
   mesh: {fileID: 2040771016}
   roomType: 2
   find: 0
-  light: 0
+  light: 1
   radiactive: 0
   quest: -1
   questPart: -1
@@ -79711,17 +79711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee01e66702087b4798e633ca34c7956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxUpdateRate: Infinity
-  preview: 0
-  blurAlgorithmSelection: 0
-  blurConfig: {fileID: 11400000, guid: e5af6203d1be11a458b6afaf636d5277, type: 2}
-  downsample: 0
-  blurRegion:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!82 &2060848373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -85109,7 +85098,7 @@ MonoBehaviour:
   mesh: {fileID: 1661097228}
   roomType: 0
   find: 0
-  light: 0
+  light: 1
   radiactive: 0
   quest: -1
   questPart: -1

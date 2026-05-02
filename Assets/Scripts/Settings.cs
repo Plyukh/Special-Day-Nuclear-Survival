@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
@@ -34,6 +35,10 @@ public class Settings : MonoBehaviour
 
     private int lastFrame;
     private float[] frameDeltaTimeArray = new float[50];
+
+    // Throttled rescan so newly spawned AudioSources pick up sfx volume without FindObjects every frame.
+    const int SfxVolumeRescanInterval = 30;
+    int sfxVolumeRescanCounter;
 
     public AudioSource music;
     public float musicValue;
@@ -70,20 +75,50 @@ public class Settings : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        ApplySfxVolumeToAllAudioSources();
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ApplySfxVolumeToAllAudioSources();
+    }
+
+    // Same logic as the old Update: all AudioSources except the music object get soundsValue volume.
+    void ApplySfxVolumeToAllAudioSources()
+    {
+        if (music == null)
+            return;
+
+        float volume = soundsValue / 10f;
+        string musicObjectName = music.name;
+        AudioSource[] audioSources = FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        for (int i = 0; i < audioSources.Length; i++)
+        {
+            AudioSource src = audioSources[i];
+            if (src.name != musicObjectName)
+                src.volume = volume;
+        }
+    }
+
     private void Update()
     {
-        AudioSource[] audioSources = FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         if (music != null)
         {
-            foreach (var audioSource in audioSources)
+            sfxVolumeRescanCounter++;
+            if (sfxVolumeRescanCounter >= SfxVolumeRescanInterval)
             {
-                if (audioSource.name != music.name)
-                {
-                    audioSource.volume = soundsValue / 10;
-                }
+                sfxVolumeRescanCounter = 0;
+                ApplySfxVolumeToAllAudioSources();
             }
         }
-
 
         if (fps && FPSText != null)
         {
@@ -181,7 +216,7 @@ public class Settings : MonoBehaviour
         if (asset != null)
         {
             GraphicsSettings.defaultRenderPipeline = asset;
-            // Иначе URP из Edit > Quality > Render Pipeline перекрывает default (см. QualitySettings.renderPipeline).
+            // Otherwise URP from Edit > Quality > Render Pipeline overrides default (see QualitySettings.renderPipeline).
             QualitySettings.renderPipeline = asset;
         }
 
@@ -357,7 +392,8 @@ public class Settings : MonoBehaviour
     {
         soundsValue = soundsSlider.value;
         soundsText.text = soundsValue.ToString();
-        
+        ApplySfxVolumeToAllAudioSources();
+
         saveScript.SaveSettings();
     }
     public void SelectLanguage(bool first = false)
