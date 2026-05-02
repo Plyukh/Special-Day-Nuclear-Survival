@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [DefaultExecutionOrder(-50)]
@@ -36,8 +37,55 @@ public class CameraZoom : MonoBehaviour
     private Vector3 baseInventoryRotation;
     private bool inventoryRotation;
 
+    void Awake()
+    {
+        ResolvePlayerReferences();
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        ResolvePlayerReferences();
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ResolvePlayerReferences();
+    }
+
+    void ResolvePlayerReferences()
+    {
+        characterMovement = null;
+
+        if (player != null)
+        {
+            characterMovement = player.GetComponent<CharacterMovement>();
+            if (characterMovement == null)
+                characterMovement = player.GetComponentInChildren<CharacterMovement>(true);
+            if (characterMovement != null)
+                return;
+        }
+
+        GameObject found = GameObject.FindGameObjectWithTag("Player");
+        if (found == null)
+            return;
+
+        if (player == null)
+            player = found;
+
+        characterMovement = found.GetComponent<CharacterMovement>();
+        if (characterMovement == null)
+            characterMovement = found.GetComponentInChildren<CharacterMovement>(true);
+    }
+
     private void Start()
     {
+        ResolvePlayerReferences();
         OnPlayerPosition();
     }
 
@@ -59,7 +107,7 @@ public class CameraZoom : MonoBehaviour
         transform.SetParent(player.transform);
         transform.localPosition = new Vector3(0, 0, baseX);
         transform.localEulerAngles = new Vector3(0, 0, 0);
-        player.transform.localEulerAngles = new Vector3(10,105,0);
+        player.transform.localEulerAngles = new Vector3(10, 105, 0);
 
         transform.SetParent(null);
         player.transform.localEulerAngles = oldRotation;
@@ -114,10 +162,8 @@ public class CameraZoom : MonoBehaviour
                     panExceededThreshold = false;
                     panPointerStartScreen = downScreen;
                     interactableUI.point.SetActive(false);
-                    if(characterMovement == null)
-                    {
-                        characterMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
-                    }
+                    if (characterMovement == null)
+                        ResolvePlayerReferences();
                 }
                 if (PrimaryPointerInput.GetPrimaryUpThisFrame(out _))
                 {
